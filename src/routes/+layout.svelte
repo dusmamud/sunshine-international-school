@@ -12,7 +12,11 @@
 
 	$effect(() => {
 		const onScroll = () => {
-			showTop = window.scrollY > 600;
+			// Hide near the very bottom so the button never covers the footer legal bar
+			const nearBottom =
+				window.scrollY + window.innerHeight >
+				document.documentElement.scrollHeight - 160;
+			showTop = window.scrollY > 600 && !nearBottom;
 		};
 		onScroll();
 		window.addEventListener('scroll', onScroll, { passive: true });
@@ -57,7 +61,7 @@
 		type="button"
 		aria-label="Back to top"
 		onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-		class="fixed right-4 bottom-20 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-maroon-900 text-gold-400 shadow-lg transition hover:bg-maroon-800 lg:bottom-6"
+		class="fixed right-4 bottom-[76px] z-50 flex h-11 w-11 items-center justify-center rounded-full bg-maroon-900 text-gold-400 shadow-lg transition hover:bg-maroon-800 lg:bottom-6"
 	>
 		<Icon name="arrow-up" cls="h-5 w-5" />
 	</button>

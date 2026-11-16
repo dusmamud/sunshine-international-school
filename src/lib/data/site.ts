@@ -23,7 +23,8 @@ export const navLinks = [
 		children: [
 			{ label: 'Our Story', href: '/about' },
 			{ label: 'Principal’s Message', href: '/about#principal' },
-			{ label: 'Our Faculty', href: '/about#faculty' },
+			{ label: 'Our Faculty', href: '/faculty' },
+			{ label: 'Mandatory Disclosure', href: '/mandatory-disclosure' },
 			{ label: 'Alumni', href: '/alumni' }
 		]
 	},
@@ -35,7 +36,9 @@ export const navLinks = [
 			{ label: 'Primary School (I – V)', href: '/academics#primary' },
 			{ label: 'Middle School (VI – VIII)', href: '/academics#middle' },
 			{ label: 'High School (IX – X)', href: '/academics#high' },
-			{ label: 'Senior Secondary (XI – XII)', href: '/academics#senior' }
+			{ label: 'Senior Secondary (XI – XII)', href: '/academics#senior' },
+			{ label: 'Board Results', href: '/board-results' },
+			{ label: 'Academic Calendar', href: '/academic-calendar' }
 		]
 	},
 	{
@@ -45,6 +48,7 @@ export const navLinks = [
 			{ label: 'Admission Process', href: '/admissions#process' },
 			{ label: 'Fee Structure', href: '/admissions#fees' },
 			{ label: 'Important Dates', href: '/admissions#dates' },
+			{ label: 'Transport', href: '/transport' },
 			{ label: 'Enquire Now', href: '/admissions#enquire' }
 		]
 	},
@@ -167,6 +171,19 @@ export const searchIndex = [
 	{ label: 'Photo Gallery', href: '/gallery', section: 'Gallery' },
 	{ label: 'News & Events', href: '/news-events', section: 'News' },
 	{ label: 'Parent Portal', href: '/parent-portal', section: 'Parents' },
+	{ label: 'Mandatory Disclosure', href: '/mandatory-disclosure', section: 'About Us' },
+	{ label: 'Board Results', href: '/board-results', section: 'Academics' },
+	{ label: 'Academic Calendar', href: '/academic-calendar', section: 'Academics' },
+	{ label: 'Faculty Directory', href: '/faculty', section: 'About Us' },
+	{ label: 'Principal Meera Kapoor', href: '/faculty/dr-meera-kapoor', section: 'Faculty' },
+	{ label: 'Notice Board', href: '/notice-board', section: 'School' },
+	{ label: 'Downloads & Forms', href: '/downloads', section: 'School' },
+	{ label: 'Transport & Bus Routes', href: '/transport', section: 'Admissions' },
+	{ label: 'Testimonials', href: '/testimonials', section: 'School' },
+	{ label: 'FAQ', href: '/faq', section: 'School' },
+	{ label: 'Sitemap', href: '/sitemap', section: 'School' },
+	{ label: 'Summer Camp', href: '/news-events/summer-camp-2024-registrations-open', section: 'News' },
+	{ label: 'Science Exhibition', href: '/news-events/science-exhibition-2024', section: 'News' },
 	{ label: 'Careers', href: '/careers', section: 'School' },
 	{ label: 'Alumni', href: '/alumni', section: 'School' },
 	{ label: 'Contact Us', href: '/contact', section: 'School' }

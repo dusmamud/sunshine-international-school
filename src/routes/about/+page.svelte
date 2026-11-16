@@ -1,6 +1,7 @@
 <script lang="ts">
 	import PageHero from '#lib/components/PageHero.svelte';
 	import Reveal from '#lib/components/Reveal.svelte';
+	import { teacherSlug } from '#lib/data/more';
 </script>
 
 <PageHero title="About Us" subtitle="Twenty years of nurturing minds and shaping futures in the heart of New Delhi." crumb={[{ label: 'Home', href: '/' }, { label: 'About Us' }]} />
@@ -22,8 +23,9 @@
 		<p class="mt-2 max-w-2xl text-ink/70">150+ experienced educators, mentors and coaches — average experience 12 years. (Demo figures.)</p>
 		<div class="mt-6 grid gap-4 sm:grid-cols-3">
 			{#each [{ n: 'Dr. Meera Kapoor', r: 'Principal · M.Ed, Ph.D Education' }, { n: 'Mr. Arjun Malhotra', r: 'Head of Science · M.Sc Physics' }, { n: 'Ms. Kavita Sharma', r: 'Head of Primary · B.Ed, M.A English' }] as f}
-				<div class="rounded-lg border border-ink/10 p-5"><span class="flex h-12 w-12 items-center justify-center rounded-full bg-maroon-800 font-display text-lg font-bold text-gold-400">{f.n.split(' ').map(x=>x[0]).slice(-2).join('')}</span><p class="mt-3 font-bold">{f.n}</p><p class="text-sm text-ink/60">{f.r}</p></div>
+				<a href="/faculty/{teacherSlug(f.n)}" class="block rounded-lg border border-ink/10 p-5 transition hover:border-maroon-800/40 hover:shadow-md"><span class="flex h-12 w-12 items-center justify-center rounded-full bg-maroon-800 font-display text-lg font-bold text-gold-400">{f.n.split(' ').map(x=>x[0]).slice(-2).join('')}</span><p class="mt-3 font-bold">{f.n}</p><p class="text-sm text-ink/60">{f.r}</p><span class="mt-2 inline-block text-xs font-extrabold tracking-wider text-maroon-800">VIEW PROFILE →</span></a>
 			{/each}
 		</div>
+		<a href="/faculty" class="mt-6 inline-flex min-h-12 items-center rounded-sm border-2 border-maroon-800 px-6 text-sm font-extrabold tracking-wide text-maroon-800 transition hover:bg-maroon-50">VIEW FULL FACULTY DIRECTORY</a>
 	</div></Reveal>
 </section>

@@ -44,16 +44,16 @@
 />
 
 <header class="sticky top-0 z-40 border-b border-maroon-900/10 bg-white/95 shadow-sm backdrop-blur">
-	<div class="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 sm:px-6 lg:px-8">
+	<div class="mx-auto flex max-w-7xl items-center justify-between gap-1 px-3 py-3 sm:px-6 lg:px-8">
 		<Logo />
 
-		<nav class="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
+		<nav class="hidden items-center gap-0.5 lg:flex" aria-label="Main navigation">
 			{#each navLinks as link}
 				{#if link.children}
 					<div class="group relative">
 						<a
 							href={link.href}
-							class="flex items-center gap-1 rounded-md px-3 py-2 text-[0.83rem] font-bold tracking-wide transition hover:text-maroon-700 {isActive(
+							class="flex items-center gap-0.5 rounded-md px-2 py-2 text-[0.78rem] font-bold whitespace-nowrap tracking-[0.04em] transition hover:text-maroon-700 {isActive(
 								link.href
 							)
 								? 'text-maroon-800 underline decoration-maroon-700 decoration-2 underline-offset-8'
@@ -81,7 +81,7 @@
 				{:else}
 					<a
 						href={link.href}
-						class="rounded-md px-3 py-2 text-[0.83rem] font-bold tracking-wide transition hover:text-maroon-700 {isActive(
+						class="rounded-md px-2 py-2 text-[0.78rem] font-bold whitespace-nowrap tracking-[0.04em] transition hover:text-maroon-700 {isActive(
 							link.href
 						)
 							? 'text-maroon-800 underline decoration-maroon-700 decoration-2 underline-offset-8'
@@ -106,7 +106,7 @@
 			</button>
 			<a
 				href="/admissions"
-				class="hidden rounded-sm bg-maroon-800 px-4 py-2.5 text-xs font-extrabold tracking-wider text-white transition hover:bg-maroon-700 xl:inline-block"
+				class="hidden rounded-sm bg-maroon-800 px-3 py-2.5 text-xs font-extrabold whitespace-nowrap tracking-wider text-white transition hover:bg-maroon-700 xl:inline-block"
 			>
 				ENQUIRE NOW
 			</a>

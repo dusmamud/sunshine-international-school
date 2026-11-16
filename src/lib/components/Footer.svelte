@@ -42,7 +42,7 @@
 			<nav aria-label="Quick links">
 				<h3 class="text-xs font-extrabold tracking-[0.25em] text-gold-400">QUICK LINKS</h3>
 				<ul class="mt-4 space-y-2.5 text-sm">
-					{#each [{ label: 'Home', href: '/' }, { label: 'About Us', href: '/about' }, { label: 'Academics', href: '/academics' }, { label: 'Campus Life', href: '/campus-life' }, { label: 'Admissions', href: '/admissions' }, { label: 'Gallery', href: '/gallery' }, { label: 'Contact Us', href: '/contact' }] as l}
+					{#each [{ label: 'Home', href: '/' }, { label: 'About Us', href: '/about' }, { label: 'Academics', href: '/academics' }, { label: 'Campus Life', href: '/campus-life' }, { label: 'Admissions', href: '/admissions' }, { label: 'Gallery', href: '/gallery' }, { label: 'Mandatory Disclosure', href: '/mandatory-disclosure' }, { label: 'Contact Us', href: '/contact' }] as l}
 						<li>
 							<a href={l.href} class="text-white/75 transition hover:text-gold-300">{l.label}</a>
 						</li>
@@ -53,7 +53,7 @@
 			<nav aria-label="Academics">
 				<h3 class="text-xs font-extrabold tracking-[0.25em] text-gold-400">ACADEMICS</h3>
 				<ul class="mt-4 space-y-2.5 text-sm">
-					{#each [{ label: 'Curriculum', href: '/academics' }, { label: 'Academic Calendar', href: '/news-events' }, { label: 'Examination', href: '/academics' }, { label: 'Library', href: '/campus-life#library' }, { label: 'E-Learning', href: '/academics' }] as l}
+					{#each [{ label: 'Curriculum', href: '/academics' }, { label: 'Academic Calendar', href: '/academic-calendar' }, { label: 'Board Results', href: '/board-results' }, { label: 'Faculty', href: '/faculty' }, { label: 'Library', href: '/campus-life#library' }, { label: 'Notice Board', href: '/notice-board' }] as l}
 						<li><a href={l.href} class="text-white/75 transition hover:text-gold-300">{l.label}</a></li>
 					{/each}
 				</ul>
@@ -62,7 +62,7 @@
 			<nav aria-label="Admissions">
 				<h3 class="text-xs font-extrabold tracking-[0.25em] text-gold-400">ADMISSIONS</h3>
 				<ul class="mt-4 space-y-2.5 text-sm">
-					{#each [{ label: 'Admission Process', href: '/admissions#process' }, { label: 'Fee Structure', href: '/admissions#fees' }, { label: 'Scholarships', href: '/admissions' }, { label: 'Transport', href: '/admissions' }, { label: 'FAQ', href: '/admissions#faq' }] as l}
+					{#each [{ label: 'Admission Process', href: '/admissions#process' }, { label: 'Fee Structure', href: '/admissions#fees' }, { label: 'Scholarships', href: '/admissions#fees' }, { label: 'Transport', href: '/transport' }, { label: 'Downloads', href: '/downloads' }, { label: 'FAQ', href: '/faq' }] as l}
 						<li><a href={l.href} class="text-white/75 transition hover:text-gold-300">{l.label}</a></li>
 					{/each}
 				</ul>

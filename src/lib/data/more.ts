@@ -1,0 +1,666 @@
+// Sunshine International School — extended data for the professional round
+// (mandatory disclosure, board results, calendar, faculty, notices, downloads,
+// transport, FAQs, testimonials, news). ALL content is demo/mock data for
+// client presentation. Real names, fees, dates and photos must be replaced
+// before a real launch.
+export const disclosure = {
+	general: [
+		{ label: 'Name of the school', value: 'Sunshine International School' },
+		{ label: 'Affiliation No.', value: '2730123 (Demo)' },
+		{ label: 'School Code', value: '65112 (Demo)' },
+		{ label: 'Complete address', value: '123 Education Street, New Delhi – 110001, India' },
+		{ label: 'Principal name & qualification', value: 'Dr. Meera Kapoor — M.Ed., Ph.D. (Education)' },
+		{ label: 'School email ID', value: 'info@sunshineschool.edu.in' },
+		{ label: 'Contact details', value: '+91 98765 43210 (Mon – Sat, 8:00 AM – 4:00 PM)' },
+		{ label: 'Year of establishment', value: '2004' },
+		{ label: 'Affiliation status', value: 'Affiliated to CBSE, New Delhi (Demo)' }
+	],
+	documents: [
+		{ name: 'Affiliation / Upgradation Letter', ref: 'CBSE/AFF/2730123/2004', validity: '31 Mar 2027', status: 'Demo copy' },
+		{ name: 'Society / Trust Registration Certificate', ref: 'SR/DL/2004/091', validity: 'Renewed 2025', status: 'Demo copy' },
+		{ name: 'No Objection Certificate (State Govt.)', ref: 'NOC/DL/2004/118', validity: 'Valid', status: 'Demo copy' },
+		{ name: 'Recognition Certificate (RTE Act, 2009)', ref: 'RTE/DL/2010/064', validity: 'Valid', status: 'Demo copy' },
+		{ name: 'Building Safety Certificate (National Building Code)', ref: 'BSC/DL/2025/142', validity: '31 Dec 2026', status: 'Demo copy' },
+		{ name: 'Fire Safety Certificate', ref: 'FSC/DL/2025/308', validity: '31 Dec 2026', status: 'Demo copy' },
+		{ name: 'DEO Certificate / Self-Certification', ref: 'DEO/DL/2025/057', validity: 'Valid', status: 'Demo copy' },
+		{ name: 'Water, Health & Sanitation Certificates', ref: 'WHS/DL/2025/201', validity: '30 Jun 2027', status: 'Demo copy' }
+	],
+	fees: [
+		{ label: 'Pre-Primary (Nursery – KG)', value: '₹48,000 / year' },
+		{ label: 'Primary (Classes I – V)', value: '₹62,000 / year' },
+		{ label: 'Middle School (Classes VI – VIII)', value: '₹72,000 / year' },
+		{ label: 'High School (Classes IX – X)', value: '₹84,000 / year' },
+		{ label: 'Senior Secondary (Classes XI – XII)', value: '₹96,000 / year' },
+		{ label: 'One-time admission fee', value: '₹15,000' },
+		{ label: 'Registration fee', value: '₹500' },
+		{ label: 'Transport (optional)', value: '₹1,500 / month' }
+	],
+	smc: [
+		{ name: 'Mr. Suresh Khanna', role: 'Chairman' },
+		{ name: 'Mrs. Kavita Khanna', role: 'Manager' },
+		{ name: 'Dr. Meera Kapoor', role: 'Principal (Member Secretary)' },
+		{ name: 'Mr. Arvind Menon', role: 'Vice Principal' },
+		{ name: 'Mrs. Shalini Bhatt', role: 'Teacher Representative' },
+		{ name: 'Mr. Rakesh Gupta', role: 'Parent Representative' },
+		{ name: 'Dr. Anil Verma', role: 'Educationist Member' }
+	],
+	pta: [
+		{ name: 'Mrs. Priya Sharma', role: 'President (Parent, Class V)' },
+		{ name: 'Mr. Rakesh Gupta', role: 'Vice President (Parent, Class XI)' },
+		{ name: 'Mrs. Sunita Agarwal', role: 'Secretary (Parent, Class III)' },
+		{ name: 'Mr. Nikhil Rao', role: 'Teacher Member' },
+		{ name: 'Mrs. Neha Gupta', role: 'Teacher Member' },
+		{ name: 'Dr. Meera Kapoor', role: 'Principal (Ex-officio)' }
+	],
+	staff: [
+		{ label: 'Principal', count: 1 },
+		{ label: 'Vice Principal', count: 1 },
+		{ label: 'PGT (Classes XI – XII)', count: 14 },
+		{ label: 'TGT (Classes VI – X)', count: 22 },
+		{ label: 'PRT (Classes I – V)', count: 26 },
+		{ label: 'Pre-Primary Teachers', count: 12 },
+		{ label: 'PET / Sports & Yoga', count: 5 },
+		{ label: 'Music, Dance & Art', count: 5 },
+		{ label: 'Counsellor', count: 1 },
+		{ label: 'Librarian', count: 1 },
+		{ label: 'Lab Assistants', count: 4 },
+		{ label: 'Special Educator', count: 1 }
+	],
+	infrastructure: [
+		{ label: 'Campus area', value: '10 acres' },
+		{ label: 'Classrooms', value: '60 smart classrooms (avg. size 20 × 24 ft)' },
+		{ label: 'Science laboratories', value: '10+ (Physics, Chemistry, Biology)' },
+		{ label: 'Computer labs', value: '2 — 80 networked systems' },
+		{ label: 'Library', value: '1 — 20,000+ books, reading hall' },
+		{ label: 'Internet connectivity', value: '100 Mbps leased line + Wi-Fi campus' },
+		{ label: 'Auditorium', value: '800 seats' },
+		{ label: 'Playground & sports', value: 'Football field, basketball court, cricket nets, athletics track' },
+		{ label: 'Toilets — Girls', value: '30' },
+		{ label: 'Toilets — Boys', value: '30' },
+		{ label: 'Toilets — CWSN', value: '4 (accessible)' },
+		{ label: 'School buses', value: '18 GPS-enabled' },
+		{ label: 'Drinking water', value: 'RO + UV purified, tested quarterly' }
+	]
+};
+
+export const boardResults = [
+	{
+		year: '2025–26',
+		x: { appeared: 148, passed: 148, pass: 100, topper: 'Aarav Mehta', topScore: '99.2%', above90: 52 },
+		xii: { appeared: 122, passed: 122, pass: 100, topper: 'Ishita Rao', topScore: '98.6%', above90: 44 }
+	},
+	{
+		year: '2024–25',
+		x: { appeared: 142, passed: 142, pass: 100, topper: 'Diya Kapoor', topScore: '98.8%', above90: 47 },
+		xii: { appeared: 118, passed: 118, pass: 100, topper: 'Kabir Singh', topScore: '98.1%', above90: 39 }
+	},
+	{
+		year: '2023–24',
+		x: { appeared: 136, passed: 136, pass: 100, topper: 'Ananya Iyer', topScore: '98.4%', above90: 41 },
+		xii: { appeared: 112, passed: 112, pass: 100, topper: 'Rohan Sethi', topScore: '97.9%', above90: 35 }
+	}
+];
+
+export const calendarTerms = [
+	{ term: 'Term 1', period: 'April – September 2026', note: 'New session, Periodic Test 1, Half-Yearly Exams' },
+	{ term: 'Term 2', period: 'October 2026 – March 2027', note: 'Periodic Test 2, Pre-Boards, Annual Exams, Results' }
+];
+
+export const calendarEvents = [
+	{ date: '01 Apr 2026', event: 'New academic session begins', category: 'Event' },
+	{ date: '14 Apr 2026', event: 'Dr. B. R. Ambedkar Jayanti — Holiday', category: 'Holiday' },
+	{ date: '01 May 2026', event: 'Labour Day — Holiday', category: 'Holiday' },
+	{ date: '15 – 25 May 2026', event: 'Summer break', category: 'Holiday' },
+	{ date: '01 Jun 2026', event: 'School reopens after summer break', category: 'Event' },
+	{ date: '11 Jul 2026', event: 'Parent–Teacher Meeting (Term 1)', category: 'Event' },
+	{ date: '03 – 08 Aug 2026', event: 'Periodic Test 1 (Classes VI – XII)', category: 'Exam' },
+	{ date: '15 Aug 2026', event: 'Independence Day celebration', category: 'Event' },
+	{ date: '02 Oct 2026', event: 'Gandhi Jayanti — Holiday', category: 'Holiday' },
+	{ date: '12 – 21 Oct 2026', event: 'Half-Yearly Examinations', category: 'Exam' },
+	{ date: '24 Oct – 02 Nov 2026', event: 'Diwali break', category: 'Holiday' },
+	{ date: '14 Nov 2026', event: "Children's Day celebration", category: 'Event' },
+	{ date: '20 Nov 2026', event: 'National Science Exhibition (school round)', category: 'Activity' },
+	{ date: '05 Dec 2026', event: 'Annual Sports Day', category: 'Activity' },
+	{ date: '20 Dec 2026', event: 'Annual Day & Prize Distribution', category: 'Event' },
+	{ date: '25 Dec 2026 – 01 Jan 2027', event: 'Winter break', category: 'Holiday' },
+	{ date: '26 Jan 2027', event: 'Republic Day celebration', category: 'Event' },
+	{ date: '01 – 10 Feb 2027', event: 'Pre-Board Examinations (Classes X & XII)', category: 'Exam' },
+	{ date: '15 Feb 2027', event: 'Annual Examinations begin', category: 'Exam' },
+	{ date: '20 Mar 2027', event: 'Result declaration & report cards', category: 'Event' },
+	{ date: '31 Mar 2027', event: 'Session 2026–27 ends', category: 'Event' }
+];
+
+export function teacherSlug(name: string) {
+	return name
+		.toLowerCase()
+		.replace(/[^a-z\s]/g, '')
+		.trim()
+		.replace(/\s+/g, '-');
+}
+
+export const facultyDirectory = [
+	{
+		department: 'Leadership',
+		members: [
+			{
+				initials: 'MK',
+				name: 'Dr. Meera Kapoor',
+				role: 'Principal',
+				note: 'M.Ed., Ph.D. (Education) — 22 yrs',
+				bio: 'Dr. Kapoor has led Sunshine International School since 2012, shaping it from a 600-student school into a 2,500-strong CBSE institution. She believes a school runs on trust — between teachers, parents and children — and her door is open to every family.',
+				subjects: ['Educational Leadership', 'School Culture'],
+				achievements: ['CBSE Best Principal Award 2023 (demo)', '100% board results for 3 consecutive years'],
+				quote: 'Every child arrives with a gift — our job is to help them unwrap it.',
+				office: 'Mon – Fri, 10:00 AM – 12:00 PM'
+			},
+			{
+				initials: 'AM',
+				name: 'Mr. Arvind Menon',
+				role: 'Vice Principal',
+				note: 'M.Sc. Mathematics — 18 yrs',
+				bio: 'A mathematics teacher at heart, Mr. Menon now leads academics and board preparation across the school. He designed the remedial programme that lifted the Class X mathematics average by 18% in two years.',
+				subjects: ['Mathematics', 'Academic Planning'],
+				achievements: ['Designed the school remedial programme', 'Mentor to 3 state-level maths Olympiad finalists'],
+				quote: 'Discipline is not restriction — it is the freedom to achieve.',
+				office: 'Mon – Sat, 9:00 – 11:00 AM'
+			},
+			{
+				initials: 'KS',
+				name: 'Ms. Kavita Sharma',
+				role: 'Head, Primary Wing',
+				note: 'B.Ed., M.A. English — 16 yrs',
+				bio: 'Ms. Sharma champions joyful early learning. Under her, the Primary Wing moved to a play-way phonics programme where reading begins with stories, rhymes and sand trays — not with rote work.',
+				subjects: ['Early Childhood Education', 'Phonics'],
+				achievements: ['Built the play-way phonics programme', 'Primary Wing reading levels up 35% in 3 years'],
+				quote: 'Children learn best when they forget they are learning.',
+				office: 'Mon – Fri, 9:00 – 11:00 AM'
+			}
+		]
+	},
+	{
+		department: 'English',
+		members: [
+			{
+				initials: 'SB',
+				name: 'Mrs. Shalini Bhatt',
+				role: 'PGT English',
+				note: 'M.A. English, B.Ed. — 15 yrs',
+				bio: 'Mrs. Bhatt teaches senior English and runs the debate and literary club. Her students have won the Delhi inter-school debate championship two years running, and the school magazine she edits is read cover to cover.',
+				subjects: ['English Literature', 'Creative Writing'],
+				achievements: ['Delhi inter-school debate champions 2025', 'Editor, school magazine “The Sunbeam”'],
+				quote: 'Words build worlds.',
+				office: 'Mon & Wed, 1:00 – 3:00 PM'
+			},
+			{
+				initials: 'RS',
+				name: 'Mr. Rohan Sethi',
+				role: 'TGT English',
+				note: 'M.A. English — 9 yrs',
+				bio: 'Mr. Sethi makes grammar feel like a game and drama feel like life. He directs the annual day English musical and coaches the middle-school elocution team.',
+				subjects: ['English Grammar', 'Drama'],
+				achievements: ['Directed 5 annual day musicals', 'Elocution team — district winners 2024'],
+				quote: 'Read a hundred books, and you have lived a hundred lives.',
+				office: 'Tue & Fri, 1:00 – 3:00 PM'
+			}
+		]
+	},
+	{
+		department: 'Hindi & Sanskrit',
+		members: [
+			{
+				initials: 'SA',
+				name: 'Mrs. Sunita Agarwal',
+				role: 'PGT Hindi',
+				note: 'M.A. Hindi, B.Ed. — 17 yrs',
+				bio: 'Mrs. Agarwal teaches senior Hindi literature and coaches the Hindi debate team to the state-level finals. Her classroom is famous for its poetry wall, where students pin their own verses.',
+				subjects: ['Hindi Literature', 'Debate'],
+				achievements: ['Hindi debate — state-level finalists', 'School poetry wall curator'],
+				quote: 'Bhasha hi sanskriti hai.',
+				office: 'Mon & Wed, 2:00 – 4:00 PM'
+			},
+			{
+				initials: 'PJ',
+				name: 'Mr. Prakash Jha',
+				role: 'TGT Hindi & Sanskrit',
+				note: 'M.A. Sanskrit — 11 yrs',
+				bio: 'Mr. Jha keeps Sanskrit alive at Sunshine — shloka recitation, Sanskrit week, and a small but passionate group of students who can chant the Bhagavad Gita from memory.',
+				subjects: ['Hindi', 'Sanskrit'],
+				achievements: ['Sanskrit shloka recitation — district winners', 'Sanskrit Week founder'],
+				quote: 'Sanskrit is the mother of clarity.',
+				office: 'Tue & Thu, 1:00 – 3:00 PM'
+			}
+		]
+	},
+	{
+		department: 'Mathematics',
+		members: [
+			{
+				initials: 'NG',
+				name: 'Mrs. Neha Gupta',
+				role: 'PGT Mathematics',
+				note: 'M.Sc. Maths — 13 yrs',
+				bio: 'Mrs. Gupta teaches senior mathematics and coaches the Olympiad group — 12 of her students qualified for Olympiad level 2 last year. Her rule: no one leaves the class with a doubt.',
+				subjects: ['Mathematics', 'Statistics'],
+				achievements: ['12 students qualified for Olympiad level 2', 'Maths Olympiad coach, 6 years'],
+				quote: 'Maths is not about numbers — it is about patterns.',
+				office: 'Mon – Fri, 2:00 – 3:00 PM'
+			},
+			{
+				initials: 'SK',
+				name: 'Mr. Sameer Khan',
+				role: 'TGT Mathematics',
+				note: 'M.Sc. Maths, B.Ed. — 10 yrs',
+				bio: 'Mr. Khan built the maths lab and the activity corners that turned fractions into board games and geometry into art. His middle-school students now ask for extra maths periods.',
+				subjects: ['Mathematics', 'Mental Maths'],
+				achievements: ['Built the maths lab & activity corners', 'Mental maths championship organiser'],
+				quote: 'Every problem has a solution — sometimes you just need a new angle.',
+				office: 'Mon, Wed & Fri, 1:00 – 2:00 PM'
+			}
+		]
+	},
+	{
+		department: 'Science',
+		members: [
+			{
+				initials: 'AM',
+				name: 'Mr. Arjun Malhotra',
+				role: 'Head of Science · PGT Physics',
+				note: 'M.Sc. Physics — 14 yrs',
+				bio: 'Mr. Malhotra runs the three science laboratories, the robotics club and the school science fair. His students built the rainwater-harvesting model that won 2nd prize at the district science exhibition.',
+				subjects: ['Physics', 'Robotics'],
+				achievements: ['District science exhibition 2nd prize (2026)', 'Robotics club — 60 active members'],
+				quote: 'Science is not a subject — it is a way of asking questions.',
+				office: 'Tue & Thu, 2:00 – 4:00 PM'
+			},
+			{
+				initials: 'AV',
+				name: 'Dr. Anil Verma',
+				role: 'PGT Chemistry',
+				note: 'M.Sc., Ph.D. Chemistry — 16 yrs',
+				bio: 'Dr. Verma brings a research lab’s rigour to school chemistry — and a storyteller’s warmth. Three of his students have qualified for NTSE, and his practical classes are the most awaited of the week.',
+				subjects: ['Chemistry'],
+				achievements: ['Ph.D. Chemistry', '3 NTSE qualifiers mentored'],
+				quote: 'Chemistry is the poetry of matter.',
+				office: 'Mon & Thu, 2:00 – 4:00 PM'
+			},
+			{
+				initials: 'PD',
+				name: 'Mrs. Pooja Desai',
+				role: 'TGT Science',
+				note: 'M.Sc. Biology, B.Ed. — 8 yrs',
+				bio: 'Mrs. Desai coordinates the school science fair and makes general science hands-on — every concept gets an experiment, every experiment gets a question to take home.',
+				subjects: ['General Science', 'Biology'],
+				achievements: ['Science fair coordinator', 'Hands-on science kit designer'],
+				quote: 'Curiosity is the beginning of all science.',
+				office: 'Mon – Fri, 1:00 – 2:00 PM'
+			}
+		]
+	},
+	{
+		department: 'Social Science',
+		members: [
+			{
+				initials: 'RM',
+				name: 'Mrs. Ritu Malhotra',
+				role: 'PGT History & Civics',
+				note: 'M.A. History — 14 yrs',
+				bio: 'Mrs. Malhotra mentors the Model UN team and teaches history as a living story — with debates, role play and field visits to Delhi’s heritage sites. Her students argue like parliamentarians.',
+				subjects: ['History', 'Civics'],
+				achievements: ['Model UN team mentor', 'Heritage walk programme founder'],
+				quote: 'History is not the past — it is the mirror of the present.',
+				office: 'Tue & Thu, 2:00 – 4:00 PM'
+			},
+			{
+				initials: 'KJ',
+				name: 'Mr. Karan Joshi',
+				role: 'TGT Geography',
+				note: 'M.A. Geography, B.Ed. — 8 yrs',
+				bio: 'Mr. Joshi built the geography map lab and runs field trips that teach contour lines on real hillsides. His disaster-management workshops are now part of the school safety drill.',
+				subjects: ['Geography', 'Disaster Management'],
+				achievements: ['Geography map lab founder', 'Disaster-management workshop lead'],
+				quote: 'The world is the best classroom.',
+				office: 'Mon & Wed, 1:00 – 3:00 PM'
+			}
+		]
+	},
+	{
+		department: 'Computer Science',
+		members: [
+			{
+				initials: 'NR',
+				name: 'Mr. Nikhil Rao',
+				role: 'PGT Computer Science',
+				note: 'MCA — 11 yrs',
+				bio: 'Mr. Rao runs the coding club, where 40 students have built real apps — a library tracker, a bus-timing board, a quiz game. He teaches Python and AI to Classes XI–XII.',
+				subjects: ['Python', 'AI & Data'],
+				achievements: ['Coding club — 40 students built working apps', 'AI workshop for Classes IX–XII'],
+				quote: 'Code is the new handwriting.',
+				office: 'Mon – Fri, 2:00 – 3:00 PM'
+			},
+			{
+				initials: 'AI',
+				name: 'Ms. Ananya Iyer',
+				role: 'TGT Computer Science',
+				note: 'B.Tech., B.Ed. — 6 yrs',
+				bio: 'Ms. Iyer introduces the youngest students to computers — Scratch stories, robotics kits, and the rule that every child finishes the term having built something of their own.',
+				subjects: ['Computers', 'Scratch & Robotics'],
+				achievements: ['Robotics club junior winners', 'Scratch storytelling festival'],
+				quote: 'Every child can code — they just need the first hello world.',
+				office: 'Tue & Fri, 1:00 – 3:00 PM'
+			}
+		]
+	},
+	{
+		department: 'Arts, Music & Sports',
+		members: [
+			{
+				initials: 'DN',
+				name: 'Mrs. Divya Nair',
+				role: 'Music Teacher',
+				note: 'M.A. Music — 13 yrs',
+				bio: 'Mrs. Nair leads the school choir and the vocal and instrumental programme. Her choir won the district cultural fest, and the morning assembly’s song is the sound of Sunshine.',
+				subjects: ['Vocal Music', 'Instrumental Music'],
+				achievements: ['District cultural fest — choir winners', 'School orchestra founder'],
+				quote: 'Music is the soul of the school.',
+				office: 'Mon, Wed & Fri, 2:00 – 4:00 PM'
+			},
+			{
+				initials: 'IS',
+				name: 'Mr. Imran Sheikh',
+				role: 'Dance & Drama',
+				note: 'Diploma, NSD — 9 yrs',
+				bio: 'Mr. Sheikh has choreographed the annual day for six years and runs the theatre society, where shy students become confident performers — and confident students become directors.',
+				subjects: ['Dance', 'Theatre'],
+				achievements: ['Annual day choreographer, 6 years', 'Theatre society — 3 inter-school wins'],
+				quote: 'The stage teaches what no textbook can.',
+				office: 'Tue & Thu, 2:00 – 4:00 PM'
+			},
+			{
+				initials: 'RY',
+				name: 'Mr. Rajesh Yadav',
+				role: 'PET / Sports',
+				note: 'B.P.Ed., Karate Black Belt — 12 yrs',
+				bio: 'Mr. Yadav coaches football, athletics and karate, and runs the morning fitness programme. His U-16 football team won the district championship in 2026.',
+				subjects: ['Physical Education', 'Karate'],
+				achievements: ['District football champions 2026', 'Karate — 30 black belts trained'],
+				quote: 'A healthy body builds a focused mind.',
+				office: 'Mon – Sat, 7:00 – 8:00 AM'
+			}
+		]
+	}
+];
+
+export const allTeachers = facultyDirectory.flatMap((d) =>
+	d.members.map((m) => ({ ...m, department: d.department, slug: teacherSlug(m.name) }))
+);
+
+export const notices = [
+	{
+		date: '12 Nov 2026',
+		title: 'Admissions Open for Academic Year 2026–27 — forms available at the school office and online',
+		category: 'Admissions',
+		pinned: true
+	},
+	{
+		date: '10 Nov 2026',
+		title: 'Half-Yearly Examination date sheet released for Classes VI – XII',
+		category: 'Examinations',
+		pinned: true
+	},
+	{
+		date: '08 Nov 2026',
+		title: 'Diwali break: school closed from 24 October to 02 November 2026',
+		category: 'Holiday',
+		pinned: false
+	},
+	{
+		date: '05 Nov 2026',
+		title: 'Parent–Teacher Meeting on 15 November 2026 (9:00 AM – 12:00 PM)',
+		category: 'General',
+		pinned: false
+	},
+	{
+		date: '01 Nov 2026',
+		title: 'Annual Sports Day on 05 December 2026 — house trials begin 18 November',
+		category: 'Sports',
+		pinned: false
+	},
+	{
+		date: '28 Oct 2026',
+		title: 'Term 1 fee due date: 10 November 2026 — pay online via parent portal',
+		category: 'Fees',
+		pinned: false
+	},
+	{
+		date: '24 Oct 2026',
+		title: 'Winter uniform compulsory from 01 December 2026',
+		category: 'General',
+		pinned: false
+	},
+	{
+		date: '20 Oct 2026',
+		title: 'National Science Exhibition (school round) on 20 November — register by 10 November',
+		category: 'Activity',
+		pinned: false
+	}
+];
+
+export const downloads = [
+	{
+		title: 'Admission Application Form 2026–27',
+		desc: 'For Nursery to Class IX and XI — fill and submit with documents at the school office.',
+		file: '/downloads/admission-form.pdf',
+		pages: '1 page',
+		size: '2 KB'
+	},
+	{
+		title: 'Transfer Certificate Application',
+		desc: 'Apply for a TC when leaving the school — attach the last fee receipt.',
+		file: '/downloads/tc-application.pdf',
+		pages: '1 page',
+		size: '2 KB'
+	},
+	{
+		title: 'Fee Challan (Term 1)',
+		desc: 'Printable fee challan for offline payment at the school office or bank.',
+		file: '/downloads/fee-challan.pdf',
+		pages: '1 page',
+		size: '2 KB'
+	},
+	{
+		title: 'Transport Request Form',
+		desc: 'Request a bus seat or change of route / stop — submit before the 10th of the month.',
+		file: '/downloads/transport-form.pdf',
+		pages: '1 page',
+		size: '2 KB'
+	},
+	{
+		title: 'Leave Application Form',
+		desc: 'For planned leave of more than 2 days — parent signature mandatory.',
+		file: '/downloads/leave-application.pdf',
+		pages: '1 page',
+		size: '2 KB'
+	},
+	{
+		title: 'Bonafide Certificate Request',
+		desc: 'Request a bonafide certificate for passport, bank or other official work.',
+		file: '/downloads/bonafide-certificate.pdf',
+		pages: '1 page',
+		size: '2 KB'
+	}
+];
+
+export const busRoutes = [
+	{ route: 'Route 1', areas: 'Connaught Place — Barakhamba Road, Janpath, Mandi House', pickup: '7:00 AM', fee: '₹1,500 / month' },
+	{ route: 'Route 2', areas: 'South Delhi — Lajpat Nagar, Greater Kailash, Saket', pickup: '6:30 AM', fee: '₹1,500 / month' },
+	{ route: 'Route 3', areas: 'East Delhi — Mayur Vihar, Preet Vihar, Laxmi Nagar', pickup: '6:45 AM', fee: '₹1,500 / month' },
+	{ route: 'Route 4', areas: 'West Delhi — Rajouri Garden, Janakpuri, Dwarka', pickup: '6:30 AM', fee: '₹1,500 / month' },
+	{ route: 'Route 5', areas: 'North Delhi — Rohini, Pitampura, Model Town', pickup: '6:45 AM', fee: '₹1,500 / month' },
+	{ route: 'Route 6', areas: 'Noida & Ghaziabad — Sector 62, Indirapuram, Vaishali', pickup: '6:30 AM', fee: '₹1,800 / month' }
+];
+
+export const generalFaqs = [
+	{
+		category: 'General',
+		q: 'What are the school timings?',
+		a: 'Classes run Monday to Saturday, 8:00 AM to 4:00 PM. Pre-Primary runs 8:30 AM to 12:30 PM. The school office is open 8:00 AM to 4:00 PM on working days.'
+	},
+	{
+		category: 'General',
+		q: 'Is the school CBSE affiliated?',
+		a: 'Yes. Sunshine International School is affiliated to the Central Board of Secondary Education (CBSE), New Delhi — Affiliation No. 2730123 (Demo). Our Mandatory Disclosure page lists the affiliation letter and all statutory certificates.'
+	},
+	{
+		category: 'Fees',
+		q: 'What does the fee include?',
+		a: 'Tuition fee covers academics, labs, library, sports and co-curricular activities. Transport (₹1,500/month) is optional. There is a one-time admission fee of ₹15,000 and a ₹500 registration fee. See the full fee structure on the Admissions page.'
+	},
+	{
+		category: 'Fees',
+		q: 'Is there a concession for siblings?',
+		a: 'Yes — a 10% concession on tuition fee for the second sibling, and a 10% concession on the one-time admission fee for alumni wards.'
+	},
+	{
+		category: 'Transport',
+		q: 'Which areas do the school buses cover?',
+		a: 'Our 18 GPS-enabled buses cover Delhi, Noida and Ghaziabad on 6 routes. Every bus has a trained driver and a lady attendant, and parents get live GPS tracking. See the Transport page for routes and timings.'
+	},
+	{
+		category: 'Transport',
+		q: 'Can I change my child’s bus route mid-year?',
+		a: 'Yes. Submit the Transport Request Form (available on the Downloads page) before the 10th of the month. Route changes are confirmed subject to seat availability on the requested route.'
+	},
+	{
+		category: 'Academics',
+		q: 'Which streams are offered in Classes XI – XII?',
+		a: 'Science (PCM / PCB), Commerce and Humanities. Competitive-exam mentoring is available for JEE, NEET, CUET and CA Foundation.'
+	},
+	{
+		category: 'Academics',
+		q: 'How are parents kept informed about progress?',
+		a: 'Through the parent portal (attendance, marks, notices), Parent–Teacher Meetings every term, and the diary. Parents can also try the Parent Portal page for a demo of the dashboard.'
+	}
+];
+
+export const extraTestimonials = [
+	{
+		quote:
+			'My daughter joined in Nursery and now reads on her own in Class II. The teachers make learning feel like play — she asks to go to school on Sundays too!',
+		name: 'Mrs. Kavita Jha',
+		role: 'Parent, Class II'
+	},
+	{
+		quote:
+			'I joined Sunshine in Class IX. The board preparation here is serious but never stressful — weekly tests, doubt sessions, and teachers who actually listen.',
+		name: 'Aarav Mehta',
+		role: 'Student, Class X'
+	},
+	{
+		quote:
+			'The robotics club changed my life. We built our first line-follower robot in Class VIII, and today I am studying Computer Science at IIT Delhi.',
+		name: 'Rohan Sethi',
+		role: 'Alumnus, Batch of 2024'
+	},
+	{
+		quote:
+			'As a single parent, the office staff and teachers have always been supportive — fee reminders are gentle, and the bus attendant knows my son by name.',
+		name: 'Mrs. Neha Singh',
+		role: 'Parent, Class V'
+	},
+	{
+		quote:
+			'The campus tour sold it for us — smart classrooms, a real library, and teachers who knew every child by name. Two years on, we would choose it again.',
+		name: 'Mr. & Mrs. Kapoor',
+		role: 'Parents, Class VII'
+	},
+	{
+		quote:
+			'From the morning assembly song to the annual day stage, Sunshine gave my daughter confidence she never had before. The music programme is outstanding.',
+		name: 'Mrs. Divya Nair',
+		role: 'Parent, Class IV'
+	}
+];
+
+export const newsItems = [
+	{
+		slug: 'summer-camp-2024-registrations-open',
+		date: '20 MAY 2024',
+		title: 'Summer Camp 2024 Registrations Open!',
+		excerpt: 'Cricket, coding, music and art — four weeks of fun learning.',
+		img: '/images/sports-students.webp',
+		category: 'Events'
+	},
+	{
+		slug: 'parent-teacher-meeting-may-2024',
+		date: '15 MAY 2024',
+		title: 'Parent-Teacher Meeting',
+		excerpt: 'Saturday, 25 May 2024, 9 AM – 1 PM across all classes.',
+		img: '/images/primary-classroom.webp',
+		category: 'Parents'
+	},
+	{
+		slug: 'admissions-open-2024-25',
+		date: '10 MAY 2024',
+		title: 'Admissions Open for 2024-25 Session',
+		excerpt: 'Nursery to Class XII — apply online or visit the campus.',
+		img: '/images/hero-students.webp',
+		category: 'Admissions'
+	},
+	{
+		slug: 'annual-sports-day-winners',
+		date: '02 MAY 2024',
+		title: 'Annual Sports Day Winners',
+		excerpt: 'Red House lifts the overall championship trophy.',
+		img: '/images/sports-students.webp',
+		category: 'Sports'
+	},
+	{
+		slug: 'science-exhibition-2024',
+		date: '25 APR 2024',
+		title: 'Science Exhibition 2024',
+		excerpt: '120 student projects on display — parents welcome.',
+		img: '/images/science-lab.jpg',
+		category: 'Academics'
+	},
+	{
+		slug: 'inter-school-debate-champions',
+		date: '18 APR 2024',
+		title: 'Inter-School Debate Champions',
+		excerpt: 'SIS team wins the Delhi inter-school debate.',
+		img: '/images/performing-arts.jpg',
+		category: 'Achievements'
+	}
+];
+
+export const newsBodies: Record<string, string[]> = {
+	'summer-camp-2024-registrations-open': [
+		'Sunshine International School’s Summer Camp 2024 opens registrations for four weeks of cricket, coding, music and art. The camp runs Monday to Friday, 8:00 AM to 12:00 PM, for students from Nursery to Class VIII.',
+		'Children can pick two activities each week — from football and swimming to robotics, painting and classical dance. All sessions are led by the school’s own coaches and teachers, with a trained first-aider on campus at all times.',
+		'Registrations close on 31 May 2024. Forms are available at the school office and through the enquiry form on the Admissions page. For any help, call the school office at +91 98765 43210 between 8:00 AM and 4:00 PM, Monday to Saturday.'
+	],
+	'parent-teacher-meeting-may-2024': [
+		'The Term 1 Parent–Teacher Meeting will be held on Saturday, 25 May 2024, from 9:00 AM to 1:00 PM across all classes. Parents are requested to carry the student diary and the Term 1 report card.',
+		'Each meeting slot is 10 minutes. Parents who need a longer discussion can book a separate appointment with the class teacher through the school office.',
+		'The Principal will be available in the main office from 10:00 AM to 12:00 PM for parents who wish to discuss school-wide matters.'
+	],
+	'admissions-open-2024-25': [
+		'Sunshine International School invites applications for Nursery to Class XII for the academic year 2024–25. Application forms are available at the school office and through the online enquiry form on the Admissions page.',
+		'Admission to Nursery to Class V is through a friendly interaction with the child, while Classes VI to IX and XI have a simple written assessment in English, Mathematics and Science.',
+		'Parents are encouraged to apply early — seats are limited in every class, and early applicants get priority for the interaction. For any help, call the admissions office at +91 98765 43210 between 8:00 AM and 4:00 PM, Monday to Saturday.'
+	],
+	'annual-sports-day-winners': [
+		'Red House lifted the overall championship trophy at the Annual Sports Day 2024, finishing ahead of Blue House by 12 points after a full day of athletics, relays and house march-past.',
+		'The day opened with the march-past and the lighting of the sports flame, followed by track finals, the inter-house tug of war, and the much-loved parents’ race.',
+		'Principal Dr. Meera Kapoor congratulated all four houses: “Winning matters, but the way our children cheered for each other mattered more.”'
+	],
+	'science-exhibition-2024': [
+		'120 student projects went on display at the Science Exhibition 2024 — from working rainwater-harvesting models to solar cookers, robotics demos and a human-body walkthrough built by Class VIII.',
+		'Parents are welcome between 10:00 AM and 1:00 PM. The best projects from each wing will represent the school at the district-level National Science Exhibition.',
+		'The school science club meets every Friday, and students from Classes VI to XII can join with a simple sign-up at the science lab.'
+	],
+	'inter-school-debate-champions': [
+		'Sunshine International School’s debate team won the Delhi inter-school debate championship, defeating 24 schools in the final round on the motion “Artificial intelligence will do more good than harm”.',
+		'The team — Aarav Mehta (Class X), Diya Kapoor (Class XI) and Kabir Singh (Class XII) — was coached by Mrs. Shalini Bhatt (PGT English). Aarav was named Best Speaker of the tournament.',
+		'Principal Dr. Meera Kapoor said: “Debate teaches children to listen before they speak — that is the skill that will carry them furthest.”'
+	]
+};

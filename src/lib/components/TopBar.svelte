@@ -14,12 +14,13 @@
 				<Icon name="phone" cls="h-3.5 w-3.5 text-gold-400" />
 				{school.phoneDisplay}
 			</a>
-			<a href="mailto:{school.email}" class="hidden items-center gap-1.5 whitespace-nowrap md:flex">
+			<a href="mailto:{school.email}" class="hidden items-center gap-1.5 whitespace-nowrap xl:flex">
 				<Icon name="mail" cls="h-3.5 w-3.5 text-gold-400" />
 				{school.email}
 			</a>
 		</div>
 		<div class="flex shrink-0 items-center gap-3 sm:gap-4">
+			<a href="/mandatory-disclosure" class="hidden font-bold text-gold-300 hover:text-gold-400 lg:inline">Mandatory Disclosure</a>
 			<a href="/parent-portal" class="hover:text-gold-300">Parent Portal</a>
 			<a href="/careers" class="hidden hover:text-gold-300 sm:inline">Careers</a>
 			<a href="/alumni" class="hidden hover:text-gold-300 sm:inline">Alumni</a>

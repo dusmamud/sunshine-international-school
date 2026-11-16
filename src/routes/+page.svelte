@@ -115,7 +115,7 @@
 			<img
 				src="/images/hero-students.webp"
 				alt="Two smiling Sunshine International School students in maroon blazers in front of the school"
-				class="h-80 w-full rounded-lg object-cover object-center shadow-xl sm:h-[26rem]"
+				class="h-[24rem] w-full rounded-lg object-cover object-top shadow-xl sm:h-[26rem] sm:object-center"
 				fetchpriority="high"
 			/>
 			<!-- Enquiry card -->
@@ -183,6 +183,17 @@
 	</div>
 </section>
 
+<!-- NOTICE TICKER -->
+<div class="bg-maroon-800 text-white">
+	<div class="mx-auto flex max-w-7xl items-center gap-3 px-4 py-2.5 sm:px-6 lg:px-8">
+		<span class="shrink-0 rounded-sm bg-gold-500 px-2 py-1 text-[0.65rem] font-extrabold tracking-wider text-maroon-950">NOTICES</span>
+		<p class="min-w-0 truncate text-sm">
+			<a href="/notice-board" class="hover:text-gold-300">Admissions open for 2026–27 · Half-Yearly date sheet released · Annual Sports Day on 05 Dec 2026</a>
+		</p>
+		<a href="/notice-board" class="ml-auto hidden shrink-0 text-xs font-extrabold tracking-wider whitespace-nowrap text-gold-300 hover:text-gold-400 sm:inline">VIEW ALL →</a>
+	</div>
+</div>
+
 <!-- WELCOME -->
 <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
 	<Reveal>
@@ -216,9 +227,14 @@
 			{/each}
 		</div>
 	</Reveal>
+	<Reveal>
+		<div class="mt-8 flex flex-wrap items-center justify-center gap-2">
+			{#each [{ label: 'Mandatory Disclosure', href: '/mandatory-disclosure' }, { label: 'Board Results', href: '/board-results' }, { label: 'Academic Calendar', href: '/academic-calendar' }, { label: 'Faculty', href: '/faculty' }, { label: 'Notice Board', href: '/notice-board' }, { label: 'Downloads', href: '/downloads' }, { label: 'Transport', href: '/transport' }, { label: 'FAQ', href: '/faq' }] as q}
+				<a href={q.href} class="inline-flex min-h-11 items-center rounded-full border border-maroon-800/25 bg-white px-4 text-xs font-extrabold tracking-wider text-maroon-800 transition hover:border-maroon-800 hover:bg-maroon-800 hover:text-white">{q.label}</a>
+			{/each}
+		</div>
+	</Reveal>
 </section>
-
-<!-- ACADEMIC PROGRAMS -->
 <section class="bg-cream/70 py-14 lg:py-20">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<Reveal>
