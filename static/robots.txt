@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sunshine-international-school.pages.dev/sitemap.xml
