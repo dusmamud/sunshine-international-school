@@ -23,10 +23,10 @@ let user=$state(''); let pass=$state(''); let logged=$state(false); let err=$sta
 		<h2 class="font-display text-2xl font-bold">Welcome, {user.trim()}!</h2>
 		<p class="mt-1 text-sm text-ink/60">Demo dashboard for Aarav Sharma, Class VI-B (mock data).</p>
 		<div class="mt-6 grid gap-4 sm:grid-cols-3">
-		{#each [['Attendance','96%'],['Fee Status','Paid till June 2024'],['Homework','2 pending']] as c}<div class="rounded-lg bg-cream p-4"><p class="text-xs font-bold tracking-wider text-maroon-800">{c[0].toUpperCase()}</p><p class="mt-1 font-bold">{c[1]}</p></div>{/each}
+		{#each [['Attendance','96%'],['Fee Status','Paid till June 2026'],['Homework','2 pending']] as c}<div class="rounded-lg bg-cream p-4"><p class="text-xs font-bold tracking-wider text-maroon-800">{c[0].toUpperCase()}</p><p class="mt-1 font-bold">{c[1]}</p></div>{/each}
 		</div>
 		<h3 class="mt-6 font-bold">Latest Circulars</h3>
-		<ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-ink/70"><li>Summer Camp 2024 registrations open (20 May)</li><li>Parent-Teacher Meeting — Saturday, 25 May 2024</li><li>Admissions open for 2024-25 session</li></ul>
+		<ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-ink/70"><li>Summer Camp 2026 registrations open (20 May)</li><li>Parent-Teacher Meeting — Saturday, 25 May 2026</li><li>Admissions open for 2026-27 session</li></ul>
 		<button type="button" onclick={()=>{logged=false;user='';pass='';}} class="mt-6 min-h-11 rounded-sm border border-maroon-800 px-5 text-sm font-bold text-maroon-800">LOG OUT</button>
 	</div>
 	{/if}

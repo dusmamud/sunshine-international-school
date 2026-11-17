@@ -53,13 +53,13 @@
 	<title>Sunshine International School, New Delhi | Nurturing Minds. Shaping Futures.</title>
 	<meta
 		name="description"
-		content="Sunshine International School, New Delhi — empowering students with knowledge, values and skills to thrive in a changing world. Admissions open 2024-25, Nursery to Class XII."
+		content="Sunshine International School, New Delhi — empowering students with knowledge, values and skills to thrive in a changing world. Admissions open 2026-27, Nursery to Class XII."
 	/>
 	<link rel="canonical" href="https://sunshine-international-school.pages.dev/" />
 	<meta property="og:title" content="Sunshine International School, New Delhi" />
 	<meta
 		property="og:description"
-		content="Learn. Grow. Succeed. Admissions open 2024-25."
+		content="Learn. Grow. Succeed. Admissions open 2026-27."
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://sunshine-international-school.pages.dev/" />
@@ -70,7 +70,7 @@
 <!-- HERO -->
 <section class="relative overflow-hidden bg-cream">
 	<img
-		src="/images/school-building.webp"
+		src="/images/main-gate.webp"
 		alt=""
 		aria-hidden="true"
 		class="hero-kenburns pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25"
@@ -83,7 +83,7 @@
 		class="hero-drift pointer-events-none absolute -bottom-32 -left-24 h-80 w-80 rounded-full bg-maroon-800/10 blur-3xl"
 		aria-hidden="true"
 	></div>
-	<div class="relative mx-auto grid max-w-7xl gap-8 px-4 pt-10 pb-12 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:px-8 lg:pt-14 lg:pb-24">
+	<div class="relative mx-auto grid max-w-7xl gap-8 px-4 pt-10 pb-12 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8 lg:pt-14 lg:pb-16">
 		<div class="fade-up min-w-0">
 			<p class="text-xs font-extrabold tracking-[0.3em] text-maroon-800">WHERE YOUNG MINDS</p>
 			<h1 class="mt-3 font-display text-5xl leading-[1.05] font-bold text-ink sm:text-6xl lg:text-7xl">
@@ -99,7 +99,7 @@
 					href="/admissions"
 					class="btn-shine group inline-flex min-h-12 items-center gap-2 rounded-sm bg-maroon-800 px-6 text-sm font-extrabold tracking-wide text-white transition hover:bg-maroon-700"
 				>
-					ADMISSIONS OPEN 2024-25
+					ADMISSIONS OPEN 2026-27
 					<Icon name="arrow-right" cls="h-4 w-4 transition-transform group-hover:translate-x-1" />
 				</a>
 				<a
@@ -129,8 +129,10 @@
 				class="h-[24rem] w-full rounded-lg object-cover object-top shadow-xl sm:h-[26rem] sm:object-center lg:h-[30rem]"
 				fetchpriority="high"
 			/>
-			<!-- Enquiry card — overlaps the photo's bottom-right on desktop, stacks below on mobile -->
-			<div class="mt-4 overflow-hidden rounded-lg bg-white shadow-xl ring-1 ring-maroon-800/10 lg:absolute lg:-bottom-10 lg:right-2 lg:mt-0 lg:w-[340px]">
+			<!-- Enquiry card — sits below the photo on every viewport so both students stay
+			     fully visible. It used to overlap the photo's bottom-right on desktop (lg:absolute)
+			     and hide the second student behind the card. -->
+			<div class="mt-4 overflow-hidden rounded-lg bg-white shadow-xl ring-1 ring-maroon-800/10 lg:w-full">
 				<div class="bg-maroon-800 px-5 py-4 text-white">
 					<h2 class="text-lg font-extrabold tracking-wide">ENQUIRE NOW</h2>
 					<p class="text-xs text-white/75">We will get in touch with you!</p>
@@ -209,7 +211,7 @@
 <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
 	<Reveal>
 		<div class="grid items-center gap-10 lg:grid-cols-2">
-			<img src="/images/school-building.webp" alt="Sunshine International School building, New Delhi" class="h-72 w-full rounded-lg object-cover shadow-lg sm:h-96" loading="lazy" />
+			<img src="/images/main-gate.webp" alt="Sunshine International School building, New Delhi" class="h-72 w-full rounded-lg object-cover shadow-lg sm:h-96" loading="lazy" />
 			<div class="min-w-0">
 				<p class="text-xs font-extrabold tracking-[0.3em] text-maroon-800">WELCOME TO SIS</p>
 				<h2 class="mt-3 font-display text-3xl leading-tight font-bold text-ink sm:text-4xl">

@@ -22,19 +22,19 @@
 
 <svelte:head>
 	<title>सनशाइन इंटरनेशनल स्कूल, नई दिल्ली | मन को पोषित करें। भविष्य को आकार दें।</title>
-	<meta name="description" content="सनशाइन इंटरनेशनल स्कूल, नई दिल्ली — नर्सरी से कक्षा XII तक। प्रवेश 2024-25 के लिए खुले हैं।" />
+	<meta name="description" content="सनशाइन इंटरनेशनल स्कूल, नई दिल्ली — नर्सरी से कक्षा XII तक। प्रवेश 2026-27 के लिए खुले हैं।" />
 	<link rel="canonical" href="https://sunshine-international-school.pages.dev/hi" />
 </svelte:head>
 
 <section class="relative overflow-hidden bg-cream">
-	<img src="/images/school-building.webp" alt="" aria-hidden="true" class="hero-kenburns pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25" />
+	<img src="/images/main-gate.webp" alt="" aria-hidden="true" class="hero-kenburns pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25" />
 	<div class="relative mx-auto grid max-w-7xl gap-8 px-4 pt-12 pb-12 sm:px-6 lg:grid-cols-2 lg:px-8">
 		<div class="fade-up min-w-0">
 			<p class="text-xs font-extrabold tracking-[0.3em] text-maroon-800">जहाँ युवा मन खिलते हैं</p>
 			<h1 class="mt-3 font-display text-5xl leading-[1.1] font-bold text-ink sm:text-6xl">सीखें। बढ़ें।<br /><span class="text-maroon-800">सफल हों।</span></h1>
 			<p class="mt-5 max-w-md leading-relaxed text-ink/70">सनशाइन इंटरनेशनल स्कूल — ज्ञान, मूल्य और कौशल के साथ बच्चों को बदलती दुनिया में सफल होने के लिए तैयार करता है।</p>
 			<div class="mt-7 flex flex-wrap gap-3">
-				<a href="/admissions" class="inline-flex min-h-12 items-center rounded-sm bg-maroon-800 px-6 text-sm font-extrabold tracking-wide text-white transition hover:bg-maroon-700">प्रवेश 2024-25 खुले हैं</a>
+				<a href="/admissions" class="inline-flex min-h-12 items-center rounded-sm bg-maroon-800 px-6 text-sm font-extrabold tracking-wide text-white transition hover:bg-maroon-700">प्रवेश 2026-27 खुले हैं</a>
 				<a href="/open-day" class="inline-flex min-h-12 items-center rounded-sm border-2 border-maroon-800 px-6 text-sm font-extrabold tracking-wide text-maroon-800 transition hover:bg-maroon-50">परिसर देखें</a>
 			</div>
 			<div class="mt-10 grid grid-cols-3 gap-4 text-center">

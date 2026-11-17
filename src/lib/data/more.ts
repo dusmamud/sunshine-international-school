@@ -583,48 +583,48 @@ export const extraTestimonials = [
 
 export const newsItems = [
 	{
-		slug: 'summer-camp-2024-registrations-open',
-		date: '20 MAY 2024',
-		title: 'Summer Camp 2024 Registrations Open!',
+		slug: 'summer-camp-2026-registrations-open',
+		date: '20 MAY 2026',
+		title: 'Summer Camp 2026 Registrations Open!',
 		excerpt: 'Cricket, coding, music and art — four weeks of fun learning.',
 		img: '/images/sports-students.webp',
 		category: 'Events'
 	},
 	{
-		slug: 'parent-teacher-meeting-may-2024',
-		date: '15 MAY 2024',
+		slug: 'parent-teacher-meeting-may-2026',
+		date: '15 MAY 2026',
 		title: 'Parent-Teacher Meeting',
-		excerpt: 'Saturday, 25 May 2024, 9 AM – 1 PM across all classes.',
+		excerpt: 'Saturday, 25 May 2026, 9 AM – 1 PM across all classes.',
 		img: '/images/primary-classroom.webp',
 		category: 'Parents'
 	},
 	{
-		slug: 'admissions-open-2024-25',
-		date: '10 MAY 2024',
-		title: 'Admissions Open for 2024-25 Session',
+		slug: 'admissions-open-2026-27',
+		date: '10 MAY 2026',
+		title: 'Admissions Open for 2026-27 Session',
 		excerpt: 'Nursery to Class XII — apply online or visit the campus.',
 		img: '/images/hero-students.webp',
 		category: 'Admissions'
 	},
 	{
 		slug: 'annual-sports-day-winners',
-		date: '02 MAY 2024',
+		date: '02 MAY 2026',
 		title: 'Annual Sports Day Winners',
 		excerpt: 'Red House lifts the overall championship trophy.',
 		img: '/images/sports-students.webp',
 		category: 'Sports'
 	},
 	{
-		slug: 'science-exhibition-2024',
-		date: '25 APR 2024',
-		title: 'Science Exhibition 2024',
+		slug: 'science-exhibition-2026',
+		date: '25 APR 2026',
+		title: 'Science Exhibition 2026',
 		excerpt: '120 student projects on display — parents welcome.',
 		img: '/images/science-lab.jpg',
 		category: 'Academics'
 	},
 	{
 		slug: 'inter-school-debate-champions',
-		date: '18 APR 2024',
+		date: '18 APR 2026',
 		title: 'Inter-School Debate Champions',
 		excerpt: 'SIS team wins the Delhi inter-school debate.',
 		img: '/images/performing-arts.jpg',
@@ -633,28 +633,28 @@ export const newsItems = [
 ];
 
 export const newsBodies: Record<string, string[]> = {
-	'summer-camp-2024-registrations-open': [
-		'Sunshine International School’s Summer Camp 2024 opens registrations for four weeks of cricket, coding, music and art. The camp runs Monday to Friday, 8:00 AM to 12:00 PM, for students from Nursery to Class VIII.',
+	'summer-camp-2026-registrations-open': [
+		'Sunshine International School’s Summer Camp 2026 opens registrations for four weeks of cricket, coding, music and art. The camp runs Monday to Friday, 8:00 AM to 12:00 PM, for students from Nursery to Class VIII.',
 		'Children can pick two activities each week — from football and swimming to robotics, painting and classical dance. All sessions are led by the school’s own coaches and teachers, with a trained first-aider on campus at all times.',
-		'Registrations close on 31 May 2024. Forms are available at the school office and through the enquiry form on the Admissions page. For any help, call the school office at +91 98765 43210 between 8:00 AM and 4:00 PM, Monday to Saturday.'
+		'Registrations close on 31 May 2026. Forms are available at the school office and through the enquiry form on the Admissions page. For any help, call the school office at +91 98765 43210 between 8:00 AM and 4:00 PM, Monday to Saturday.'
 	],
-	'parent-teacher-meeting-may-2024': [
-		'The Term 1 Parent–Teacher Meeting will be held on Saturday, 25 May 2024, from 9:00 AM to 1:00 PM across all classes. Parents are requested to carry the student diary and the Term 1 report card.',
+	'parent-teacher-meeting-may-2026': [
+		'The Term 1 Parent–Teacher Meeting will be held on Saturday, 25 May 2026, from 9:00 AM to 1:00 PM across all classes. Parents are requested to carry the student diary and the Term 1 report card.',
 		'Each meeting slot is 10 minutes. Parents who need a longer discussion can book a separate appointment with the class teacher through the school office.',
 		'The Principal will be available in the main office from 10:00 AM to 12:00 PM for parents who wish to discuss school-wide matters.'
 	],
-	'admissions-open-2024-25': [
-		'Sunshine International School invites applications for Nursery to Class XII for the academic year 2024–25. Application forms are available at the school office and through the online enquiry form on the Admissions page.',
+	'admissions-open-2026-27': [
+		'Sunshine International School invites applications for Nursery to Class XII for the academic year 2026–27. Application forms are available at the school office and through the online enquiry form on the Admissions page.',
 		'Admission to Nursery to Class V is through a friendly interaction with the child, while Classes VI to IX and XI have a simple written assessment in English, Mathematics and Science.',
 		'Parents are encouraged to apply early — seats are limited in every class, and early applicants get priority for the interaction. For any help, call the admissions office at +91 98765 43210 between 8:00 AM and 4:00 PM, Monday to Saturday.'
 	],
 	'annual-sports-day-winners': [
-		'Red House lifted the overall championship trophy at the Annual Sports Day 2024, finishing ahead of Blue House by 12 points after a full day of athletics, relays and house march-past.',
+		'Red House lifted the overall championship trophy at the Annual Sports Day 2026, finishing ahead of Blue House by 12 points after a full day of athletics, relays and house march-past.',
 		'The day opened with the march-past and the lighting of the sports flame, followed by track finals, the inter-house tug of war, and the much-loved parents’ race.',
 		'Principal Dr. Meera Kapoor congratulated all four houses: “Winning matters, but the way our children cheered for each other mattered more.”'
 	],
-	'science-exhibition-2024': [
-		'120 student projects went on display at the Science Exhibition 2024 — from working rainwater-harvesting models to solar cookers, robotics demos and a human-body walkthrough built by Class VIII.',
+	'science-exhibition-2026': [
+		'120 student projects went on display at the Science Exhibition 2026 — from working rainwater-harvesting models to solar cookers, robotics demos and a human-body walkthrough built by Class VIII.',
 		'Parents are welcome between 10:00 AM and 1:00 PM. The best projects from each wing will represent the school at the district-level National Science Exhibition.',
 		'The school science club meets every Friday, and students from Classes VI to XII can join with a simple sign-up at the science lab.'
 	],
@@ -697,11 +697,11 @@ export const facilitiesList = [
 	{ name: 'Sports & Athletics', icon: 'trophy', img: '/images/sports-students.webp', desc: 'Football field, basketball court, cricket nets, athletics track and a morning fitness programme.' },
 	{ name: 'Performing Arts', icon: 'music', img: '/images/performing-arts.jpg', desc: 'Music rooms, dance studio, a 800-seat auditorium and the annual day stage.' },
 	{ name: 'Infirmary', icon: 'heart', img: '/images/campus-life.jpg', desc: 'A full-time nurse, a doctor on call, first-aid in every wing and a sick bay with 6 beds.' },
-	{ name: 'Safe Transport', icon: 'bus', img: '/images/school-building.webp', desc: '18 GPS-enabled buses with a trained driver and a lady attendant on every route.' }
+	{ name: 'Safe Transport', icon: 'bus', img: '/images/main-gate.webp', desc: '18 GPS-enabled buses with a trained driver and a lady attendant on every route.' }
 ];
 
 export const tourStops = [
-	{ name: 'The Main Gate', img: '/images/school-building.webp', desc: 'A warm welcome at our 10-acre campus — security-checked entry and a shaded parent waiting lounge.' },
+	{ name: 'The Main Gate', img: '/images/main-gate.webp', desc: 'A warm welcome at our 10-acre campus — security-checked entry and a shaded parent waiting lounge.' },
 	{ name: 'Smart Classrooms', img: '/images/primary-classroom.webp', desc: 'See a live class in action: interactive panels, group seating and joyful, activity-based learning.' },
 	{ name: 'Science Laboratories', img: '/images/science-lab.jpg', desc: 'Physics, Chemistry and Biology labs where every child experiments hands-on, twice a week.' },
 	{ name: 'Library', img: '/images/library.jpg', desc: '20,000+ books, a reading hall and the reading programme that made us the “reading school” of the neighbourhood.' },

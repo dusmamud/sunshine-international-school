@@ -7,7 +7,7 @@
 <PageHero title="About Us" subtitle="Twenty years of nurturing minds and shaping futures in the heart of New Delhi." crumb={[{ label: 'Home', href: '/' }, { label: 'About Us' }]} />
 <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
 	<Reveal><div class="grid gap-10 lg:grid-cols-2">
-		<img src="/images/school-building.webp" alt="Sunshine International School campus" class="h-80 w-full rounded-lg object-cover shadow-lg" />
+		<img src="/images/main-gate.webp" alt="Sunshine International School campus" class="h-80 w-full rounded-lg object-cover shadow-lg" />
 		<div class="min-w-0"><p class="text-xs font-extrabold tracking-[0.3em] text-maroon-800">OUR STORY</p>
 		<h2 class="mt-3 font-display text-3xl font-bold">Founded in 2004, growing with every child</h2>
 		<p class="mt-4 leading-relaxed text-ink/70">Sunshine International School began in New Delhi with 120 students and a simple dream — quality education for every child. Today, 2,500+ students from Nursery to Class XII learn on our 10-acre campus with 150+ dedicated faculty. (Demo content.)</p>

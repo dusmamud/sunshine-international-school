@@ -4,7 +4,7 @@ import PageHero from '#lib/components/PageHero.svelte';
 let name=$state(''); let phone=$state(''); let grade=$state(''); let done=$state(false); let err=$state('');
 	function submit(e:Event){e.preventDefault(); if(name.trim().length<2){err='Please enter the parent name.';return;} if(!/^[6-9]\d{9}$/.test(phone.replace(/[\s-]/g,''))){err='Enter a valid 10-digit mobile number.';return;} if(!grade){err='Please choose a grade.';return;} err=''; done=true;}
 </script>
-<PageHero title="Admissions" subtitle="Admissions open for 2024-25 — Nursery to Class XII. (Demo fees and dates.)" crumb={[{ label: 'Home', href: '/' }, { label: 'Admissions' }]} />
+<PageHero title="Admissions" subtitle="Admissions open for 2026-27 — Nursery to Class XII. (Demo fees and dates.)" crumb={[{ label: 'Home', href: '/' }, { label: 'Admissions' }]} />
 <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
 	<Reveal><div id="process"><h2 class="font-display text-2xl font-bold sm:text-3xl">Admission Process</h2>
 	<div class="mt-6 grid gap-4 sm:grid-cols-4">
@@ -28,8 +28,8 @@ let name=$state(''); let phone=$state(''); let grade=$state(''); let done=$state
 	<thead class="bg-maroon-800 text-white"><tr><th class="px-4 py-3">Grade</th><th class="px-4 py-3">Tuition</th><th class="px-4 py-3">Admission (one-time)</th></tr></thead>
 	<tbody>{#each [['Nursery – KG','₹48,000','₹15,000'],['Class I – V','₹62,000','₹15,000'],['Class VI – VIII','₹72,000','₹15,000'],['Class IX – X','₹84,000','₹20,000'],['Class XI – XII','₹96,000','₹20,000']] as r}<tr class="border-t border-ink/10"><td class="px-4 py-3 font-semibold">{r[0]}</td><td class="px-4 py-3">{r[1]}</td><td class="px-4 py-3">{r[2]}</td></tr>{/each}</tbody></table></div>
 	<p class="mt-2 text-xs text-ink/50">Demo fees for presentation only. Transport and meals extra.</p></div></Reveal>
-	<Reveal><div id="dates" class="mt-14 scroll-mt-28"><h2 class="font-display text-2xl font-bold sm:text-3xl">Important Dates (2024-25, demo)</h2>
-	<ul class="mt-4 space-y-2 text-sm text-ink/75"><li>• Applications open — 1 May 2024</li><li>• Interaction rounds — 20 May – 10 June 2024</li><li>• First list — 20 June 2024</li><li>• Session begins — 1 July 2024</li></ul></div></Reveal>
+	<Reveal><div id="dates" class="mt-14 scroll-mt-28"><h2 class="font-display text-2xl font-bold sm:text-3xl">Important Dates (2026-27, demo)</h2>
+	<ul class="mt-4 space-y-2 text-sm text-ink/75"><li>• Applications open — 1 May 2026</li><li>• Interaction rounds — 20 May – 10 June 2026</li><li>• First list — 20 June 2026</li><li>• Session begins — 1 July 2026</li></ul></div></Reveal>
 	<Reveal><div id="enquire" class="mt-14 scroll-mt-28 rounded-lg bg-cream p-6 sm:p-8">
 	<h2 class="font-display text-2xl font-bold">Enquire Now</h2>
 	{#if done}<p class="mt-3 rounded-md bg-white p-4 font-bold text-maroon-800">Thank you, {name.trim()}! Your enquiry for {grade} was received (demo).</p>

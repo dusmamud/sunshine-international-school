@@ -1,6 +1,6 @@
 // Sunshine International School — shared site data.
-// ALL content is demo/mock data for client presentation (2024-25 session as in the
-// reference design). Real names, fees, dates and photos must be replaced before launch.
+// ALL content is demo/mock data for client presentation (2026-27 session). Real names,
+// fees, dates and photos must be replaced before launch.
 export const school = {
 	name: 'Sunshine International School',
 	short: 'SIS',
@@ -141,9 +141,9 @@ export const activities = [
 ];
 
 export const announcements = [
-	{ day: '20', month: 'MAY', title: 'Summer Camp 2024 Registrations Open!', text: 'Know More →' },
-	{ day: '15', month: 'MAY', title: 'Parent-Teacher Meeting', text: 'Saturday, 25 May 2024' },
-	{ day: '10', month: 'MAY', title: 'Admissions Open for 2024-25 Session', text: 'Know More →' }
+	{ day: '20', month: 'MAY', title: 'Summer Camp 2026 Registrations Open!', text: 'Know More →' },
+	{ day: '15', month: 'MAY', title: 'Parent-Teacher Meeting', text: 'Saturday, 25 May 2026' },
+	{ day: '10', month: 'MAY', title: 'Admissions Open for 2026-27 Session', text: 'Know More →' }
 ];
 
 export const testimonial = {
@@ -155,7 +155,7 @@ export const testimonial = {
 
 export const galleryItems = [
 	{ src: '/images/hero-students.webp', alt: 'Students in maroon blazers in front of the school', cat: 'Campus' },
-	{ src: '/images/school-building.webp', alt: 'Sunshine International School building', cat: 'Campus' },
+	{ src: '/images/main-gate.webp', alt: 'Sunshine International School building', cat: 'Campus' },
 	{ src: '/images/primary-classroom.webp', alt: 'Primary students learning in class', cat: 'Academics' },
 	{ src: '/images/sports-students.webp', alt: 'Students playing football', cat: 'Sports' },
 	{ src: '/images/pre-primary.jpg', alt: 'Pre-primary children at play', cat: 'Academics' },
@@ -169,7 +169,7 @@ export const galleryItems = [
 ];
 
 export const searchIndex = [
-	{ label: 'Admissions Open 2024-25', href: '/admissions', section: 'Admissions' },
+	{ label: 'Admissions Open 2026-27', href: '/admissions', section: 'Admissions' },
 	{ label: 'Admission Process', href: '/admissions#process', section: 'Admissions' },
 	{ label: 'Fee Structure', href: '/admissions#fees', section: 'Admissions' },
 	{ label: 'Important Dates', href: '/admissions#dates', section: 'Admissions' },
@@ -194,8 +194,8 @@ export const searchIndex = [
 	{ label: 'Testimonials', href: '/testimonials', section: 'School' },
 	{ label: 'FAQ', href: '/faq', section: 'School' },
 	{ label: 'Sitemap', href: '/sitemap', section: 'School' },
-	{ label: 'Summer Camp', href: '/news-events/summer-camp-2024-registrations-open', section: 'News' },
-	{ label: 'Science Exhibition', href: '/news-events/science-exhibition-2024', section: 'News' },
+	{ label: 'Summer Camp', href: '/news-events/summer-camp-2026-registrations-open', section: 'News' },
+	{ label: 'Science Exhibition', href: '/news-events/science-exhibition-2026', section: 'News' },
 	{ label: 'Careers', href: '/careers', section: 'School' },
 	{ label: 'Alumni', href: '/alumni', section: 'School' },
 	{ label: 'Contact Us', href: '/contact', section: 'School' },
