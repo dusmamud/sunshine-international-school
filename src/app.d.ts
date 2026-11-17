@@ -8,6 +8,14 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+	interface ViewTransition {
+		readonly ready: Promise<void>;
+		readonly finished: Promise<void>;
+		readonly updateCallbackDone: Promise<void>;
+	}
+	interface Document {
+		startViewTransition?(updateCallback?: () => void | Promise<void>): ViewTransition;
+	}
 }
 
 export {};

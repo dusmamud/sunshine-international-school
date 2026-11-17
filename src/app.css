@@ -78,6 +78,162 @@ body {
 	animation: kenburns 8s ease-out forwards;
 }
 
+/* ---- Round 3 motion system (transform/opacity only) ---- */
+
+/* Hero kinetic type: words slide up out of a clip mask, staggered */
+.hero-word {
+	display: inline-block;
+	clip-path: inset(0 0 0 0);
+	animation: hero-word-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+	animation-delay: var(--d, 0s);
+}
+@keyframes hero-word-in {
+	from {
+		opacity: 0;
+		transform: translateY(110%);
+		clip-path: inset(0 0 100% 0);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+/* Ambient slow gradient drift behind the hero (20s loop) */
+.hero-drift {
+	animation: hero-drift 22s ease-in-out infinite alternate;
+}
+@keyframes hero-drift {
+	from {
+		transform: translate3d(-2%, -1%, 0) scale(1);
+	}
+	to {
+		transform: translate3d(2%, 2%, 0) scale(1.05);
+	}
+}
+
+/* Button shine sweep */
+.btn-shine {
+	position: relative;
+	overflow: hidden;
+}
+.btn-shine::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.35) 50%, transparent 60%);
+	transform: translateX(-120%);
+	transition: transform 0.6s ease;
+	pointer-events: none;
+}
+.btn-shine:hover::after {
+	transform: translateX(120%);
+}
+
+/* Card hover lift + maroon-tinted shadow */
+.card-lift {
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
+}
+.card-lift:hover {
+	transform: translateY(-4px);
+	box-shadow:
+		0 16px 32px -16px rgba(122, 30, 43, 0.35),
+		0 4px 12px -4px rgba(31, 42, 68, 0.12);
+}
+
+/* Success check pop */
+.success-check {
+	animation: check-pop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+@keyframes check-pop {
+	from {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* Gold rule that draws under a section heading once revealed */
+.gold-rule {
+	display: block;
+	height: 4px;
+	width: 80px;
+	border-radius: 9999px;
+	background: #c9a227;
+	transform: scaleX(0);
+	transform-origin: left center;
+	transition: transform 0.8s ease-out 0.25s;
+}
+.reveal.is-visible .gold-rule,
+.gold-rule.is-visible {
+	transform: scaleX(1);
+}
+.gold-rule.center {
+	margin-inline: auto;
+	transform-origin: center;
+}
+
+/* Reveal variants (set via Reveal `variant` prop) */
+.reveal[data-variant='scale'] {
+	transform: translateY(12px) scale(0.97);
+}
+.reveal[data-variant='fade'] {
+	transform: none;
+}
+
+/* Animated tab indicator (positioned by --tab-index / --tab-count) */
+.tabs-underline {
+	position: relative;
+}
+.tab-indicator {
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	height: 3px;
+	width: calc(100% / var(--tab-count, 3));
+	transform: translateX(calc(var(--tab-index, 0) * 100%));
+	background: #7a1e2b;
+	border-radius: 9999px;
+	transition: transform 0.35s ease;
+}
+
+/* View Transitions API — page cross-fade, 350ms ease-out */
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: 0.35s;
+	animation-timing-function: ease-out;
+}
+::view-transition-old(root) {
+	animation-name: vt-fade-out;
+}
+::view-transition-new(root) {
+	animation-name: vt-fade-in;
+}
+@keyframes vt-fade-out {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+@keyframes vt-fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(6px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.reveal {
 		opacity: 1;
@@ -85,7 +241,29 @@ body {
 		transition: none;
 	}
 	.hero-kenburns,
-	.fade-up {
+	.fade-up,
+	.hero-word,
+	.hero-drift,
+	.success-check {
+		animation: none;
+	}
+	.hero-word {
+		opacity: 1;
+		transform: none;
+		clip-path: none;
+	}
+	.gold-rule {
+		transform: scaleX(1);
+		transition: none;
+	}
+	.btn-shine::after {
+		display: none;
+	}
+	.card-lift:hover {
+		transform: none;
+	}
+	::view-transition-old(root),
+	::view-transition-new(root) {
 		animation: none;
 	}
 	html {

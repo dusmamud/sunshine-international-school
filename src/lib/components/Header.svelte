@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { slide } from 'svelte/transition';
 	import Logo from '#lib/components/Logo.svelte';
 	import Icon from '#lib/components/Icon.svelte';
 	import { navLinks, searchIndex } from '#lib/data/site';
@@ -127,6 +128,7 @@
 	<!-- Mobile menu -->
 	{#if mobileOpen}
 		<nav
+			transition:slide={{ duration: 300 }}
 			class="max-h-[75vh] overflow-y-auto border-t border-maroon-900/10 bg-white px-4 pt-2 pb-6 lg:hidden"
 			aria-label="Mobile navigation"
 		>
@@ -243,6 +245,9 @@
 					</li>
 				{/each}
 			</ul>
+			<a href="/search" onclick={closeAll} class="mt-6 inline-flex items-center gap-2 text-sm font-extrabold tracking-wider text-gold-400 transition hover:text-gold-300">
+				OPEN FULL SEARCH PAGE <Icon name="arrow-right" cls="h-4 w-4" />
+			</a>
 		</div>
 	</div>
 {/if}

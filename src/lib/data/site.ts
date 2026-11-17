@@ -25,6 +25,7 @@ export const navLinks = [
 			{ label: 'Principal’s Message', href: '/about#principal' },
 			{ label: 'Our Faculty', href: '/faculty' },
 			{ label: 'Mandatory Disclosure', href: '/mandatory-disclosure' },
+			{ label: 'Circulars', href: '/circulars' },
 			{ label: 'Alumni', href: '/alumni' }
 		]
 	},
@@ -38,6 +39,10 @@ export const navLinks = [
 			{ label: 'High School (IX – X)', href: '/academics#high' },
 			{ label: 'Senior Secondary (XI – XII)', href: '/academics#senior' },
 			{ label: 'Board Results', href: '/board-results' },
+			{ label: 'Examinations', href: '/examination' },
+			{ label: 'Timetables', href: '/timetable' },
+			{ label: 'E-Learning', href: '/e-learning' },
+			{ label: 'Library', href: '/library' },
 			{ label: 'Academic Calendar', href: '/academic-calendar' }
 		]
 	},
@@ -46,7 +51,11 @@ export const navLinks = [
 		href: '/admissions',
 		children: [
 			{ label: 'Admission Process', href: '/admissions#process' },
-			{ label: 'Fee Structure', href: '/admissions#fees' },
+			{ label: 'Fee Structure', href: '/fees' },
+			{ label: 'Pay Fees Online', href: '/fee-payment' },
+			{ label: 'Scholarships', href: '/scholarships' },
+			{ label: 'Open Day', href: '/open-day' },
+			{ label: 'Prospectus', href: '/prospectus' },
 			{ label: 'Important Dates', href: '/admissions#dates' },
 			{ label: 'Transport', href: '/transport' },
 			{ label: 'Enquire Now', href: '/admissions#enquire' }
@@ -56,10 +65,13 @@ export const navLinks = [
 		label: 'Campus Life',
 		href: '/campus-life',
 		children: [
+			{ label: 'Facilities', href: '/facilities' },
+			{ label: 'Virtual Tour', href: '/virtual-tour' },
+			{ label: 'Campus Safety', href: '/safety' },
 			{ label: 'Sports', href: '/campus-life#sports' },
 			{ label: 'Performing Arts', href: '/campus-life#arts' },
 			{ label: 'Clubs & Societies', href: '/campus-life#clubs' },
-			{ label: 'Library & Labs', href: '/campus-life#library' }
+			{ label: 'Library & Labs', href: '/library' }
 		]
 	},
 	{ label: 'Gallery', href: '/gallery' },
@@ -186,5 +198,27 @@ export const searchIndex = [
 	{ label: 'Science Exhibition', href: '/news-events/science-exhibition-2024', section: 'News' },
 	{ label: 'Careers', href: '/careers', section: 'School' },
 	{ label: 'Alumni', href: '/alumni', section: 'School' },
-	{ label: 'Contact Us', href: '/contact', section: 'School' }
+	{ label: 'Contact Us', href: '/contact', section: 'School' },
+	{ label: 'Fee Structure', href: '/fees', section: 'Admissions' },
+	{ label: 'Pay Fees Online', href: '/fee-payment', section: 'Admissions' },
+	{ label: 'Scholarships', href: '/scholarships', section: 'Admissions' },
+	{ label: 'Open Day', href: '/open-day', section: 'Admissions' },
+	{ label: 'Prospectus 2026–27', href: '/prospectus', section: 'Admissions' },
+	{ label: 'Facilities', href: '/facilities', section: 'Campus Life' },
+	{ label: 'Virtual Tour', href: '/virtual-tour', section: 'Campus Life' },
+	{ label: 'Campus Safety', href: '/safety', section: 'Campus Life' },
+	{ label: 'Examinations & Date Sheets', href: '/examination', section: 'Academics' },
+	{ label: 'Class Timetables', href: '/timetable', section: 'Academics' },
+	{ label: 'E-Learning Resources', href: '/e-learning', section: 'Academics' },
+	{ label: 'Library', href: '/library', section: 'Campus Life' },
+	{ label: 'Circulars', href: '/circulars', section: 'School' },
+	{ label: 'Accessibility Statement', href: '/accessibility', section: 'School' },
+	{ label: 'Cookie Policy', href: '/cookie-policy', section: 'School' },
+	{ label: 'Search the Site', href: '/search', section: 'School' },
+	{ label: 'हिन्दी में देखें', href: '/hi', section: 'School' },
+	{ label: 'Admissions — Pre-Primary', href: '/admissions/pre-primary', section: 'Admissions' },
+	{ label: 'Admissions — Primary School', href: '/admissions/primary', section: 'Admissions' },
+	{ label: 'Admissions — Middle School', href: '/admissions/middle', section: 'Admissions' },
+	{ label: 'Admissions — High School', href: '/admissions/high', section: 'Admissions' },
+	{ label: 'Admissions — Senior Secondary', href: '/admissions/senior-secondary', section: 'Admissions' }
 ];

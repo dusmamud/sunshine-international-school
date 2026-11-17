@@ -21,9 +21,20 @@
 			title: 'Admissions & Parents',
 			links: [
 				{ label: 'Parent Portal', href: '/parent-portal' },
+				{ label: 'Fee Structure', href: '/fees' },
+				{ label: 'Pay Fees Online', href: '/fee-payment' },
+				{ label: 'Scholarships', href: '/scholarships' },
+				{ label: 'Open Day', href: '/open-day' },
+				{ label: 'Prospectus', href: '/prospectus' },
+				{ label: 'Admissions — Pre-Primary', href: '/admissions/pre-primary' },
+				{ label: 'Admissions — Primary School', href: '/admissions/primary' },
+				{ label: 'Admissions — Middle School', href: '/admissions/middle' },
+				{ label: 'Admissions — High School', href: '/admissions/high' },
+				{ label: 'Admissions — Senior Secondary', href: '/admissions/senior-secondary' },
 				{ label: 'Transport & Bus Routes', href: '/transport' },
 				{ label: 'Downloads & Forms', href: '/downloads' },
 				{ label: 'Notice Board', href: '/notice-board' },
+				{ label: 'Circulars', href: '/circulars' },
 				{ label: 'FAQ', href: '/faq' },
 				{ label: 'Testimonials', href: '/testimonials' }
 			]
@@ -33,11 +44,22 @@
 			links: [
 				{ label: 'Mandatory Disclosure', href: '/mandatory-disclosure' },
 				{ label: 'Board Results', href: '/board-results' },
+				{ label: 'Examinations', href: '/examination' },
+				{ label: 'Timetables', href: '/timetable' },
+				{ label: 'E-Learning', href: '/e-learning' },
+				{ label: 'Library', href: '/library' },
 				{ label: 'Academic Calendar', href: '/academic-calendar' },
 				{ label: 'Faculty Directory', href: '/faculty' },
+				{ label: 'Facilities', href: '/facilities' },
+				{ label: 'Virtual Tour', href: '/virtual-tour' },
+				{ label: 'Campus Safety', href: '/safety' },
 				{ label: 'News & Events', href: '/news-events' },
 				{ label: 'Alumni', href: '/alumni' },
-				{ label: 'Careers', href: '/careers' }
+				{ label: 'Careers', href: '/careers' },
+				{ label: 'Search the Site', href: '/search' },
+				{ label: 'हिन्दी संस्करण', href: '/hi' },
+				{ label: 'Accessibility', href: '/accessibility' },
+				{ label: 'Cookie Policy', href: '/cookie-policy' }
 			]
 		},
 		{

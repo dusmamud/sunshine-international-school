@@ -53,7 +53,7 @@
 			<nav aria-label="Academics">
 				<h3 class="text-xs font-extrabold tracking-[0.25em] text-gold-400">ACADEMICS</h3>
 				<ul class="mt-4 space-y-2.5 text-sm">
-					{#each [{ label: 'Curriculum', href: '/academics' }, { label: 'Academic Calendar', href: '/academic-calendar' }, { label: 'Board Results', href: '/board-results' }, { label: 'Faculty', href: '/faculty' }, { label: 'Library', href: '/campus-life#library' }, { label: 'Notice Board', href: '/notice-board' }] as l}
+					{#each [{ label: 'Curriculum', href: '/academics' }, { label: 'Academic Calendar', href: '/academic-calendar' }, { label: 'Board Results', href: '/board-results' }, { label: 'Examinations', href: '/examination' }, { label: 'Timetables', href: '/timetable' }, { label: 'Faculty', href: '/faculty' }, { label: 'Library', href: '/library' }, { label: 'E-Learning', href: '/e-learning' }, { label: 'Notice Board', href: '/notice-board' }] as l}
 						<li><a href={l.href} class="text-white/75 transition hover:text-gold-300">{l.label}</a></li>
 					{/each}
 				</ul>
@@ -62,7 +62,7 @@
 			<nav aria-label="Admissions">
 				<h3 class="text-xs font-extrabold tracking-[0.25em] text-gold-400">ADMISSIONS</h3>
 				<ul class="mt-4 space-y-2.5 text-sm">
-					{#each [{ label: 'Admission Process', href: '/admissions#process' }, { label: 'Fee Structure', href: '/admissions#fees' }, { label: 'Scholarships', href: '/admissions#fees' }, { label: 'Transport', href: '/transport' }, { label: 'Downloads', href: '/downloads' }, { label: 'FAQ', href: '/faq' }] as l}
+					{#each [{ label: 'Admission Process', href: '/admissions#process' }, { label: 'Fee Structure', href: '/fees' }, { label: 'Pay Fees Online', href: '/fee-payment' }, { label: 'Scholarships', href: '/scholarships' }, { label: 'Open Day', href: '/open-day' }, { label: 'Prospectus', href: '/prospectus' }, { label: 'Transport', href: '/transport' }, { label: 'Downloads', href: '/downloads' }, { label: 'FAQ', href: '/faq' }] as l}
 						<li><a href={l.href} class="text-white/75 transition hover:text-gold-300">{l.label}</a></li>
 					{/each}
 				</ul>
@@ -134,10 +134,16 @@
 			class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-4 text-xs text-white/60 sm:flex-row sm:px-6 lg:px-8"
 		>
 			<p>© 2024 Sunshine International School. All Rights Reserved.</p>
-			<p class="flex gap-4">
+			<p class="flex flex-wrap justify-center gap-4 sm:justify-end">
 				<a href="/privacy-policy" class="transition hover:text-gold-300">Privacy Policy</a>
 				<span aria-hidden="true">|</span>
 				<a href="/terms" class="transition hover:text-gold-300">Terms &amp; Conditions</a>
+				<span aria-hidden="true">|</span>
+				<a href="/accessibility" class="transition hover:text-gold-300">Accessibility</a>
+				<span aria-hidden="true">|</span>
+				<a href="/cookie-policy" class="transition hover:text-gold-300">Cookie Policy</a>
+				<span aria-hidden="true">|</span>
+				<a href="/hi" class="transition hover:text-gold-300">हिन्दी</a>
 			</p>
 		</div>
 	</div>

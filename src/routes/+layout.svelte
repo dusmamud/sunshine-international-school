@@ -1,5 +1,7 @@
 <script lang="ts">
 	import '../app.css';
+	import { onNavigate } from '$app/navigation';
+	import { scale } from 'svelte/transition';
 	import TopBar from '#lib/components/TopBar.svelte';
 	import Header from '#lib/components/Header.svelte';
 	import Footer from '#lib/components/Footer.svelte';
@@ -7,6 +9,18 @@
 	import type { LayoutProps } from './$types';
 
 	let { children }: LayoutProps = $props();
+
+	// View Transitions API: native-feel page cross-fade (350ms, ease-out).
+	// Falls back silently where the API is unavailable.
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+		return new Promise<void>((resolve) => {
+			document.startViewTransition?.(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 
 	let showTop = $state(false);
 
@@ -22,6 +36,13 @@
 		window.addEventListener('scroll', onScroll, { passive: true });
 		return () => window.removeEventListener('scroll', onScroll);
 	});
+
+	// WhatsApp chat — prefilled enquiry (demo number = school phone)
+	const waHref =
+		'https://wa.me/919876543210?text=' +
+		encodeURIComponent(
+			'Hello Sunshine International School! I would like to enquire about admissions. My child is applying for Class '
+		);
 </script>
 
 <TopBar />
@@ -55,13 +76,25 @@
 	</a>
 </div>
 
+<!-- WhatsApp floating button — sits above the mobile call bar, hides near the footer -->
+<a
+	href={waHref}
+	target="_blank"
+	rel="noopener noreferrer"
+	aria-label="Chat with us on WhatsApp"
+	class="fixed right-4 bottom-[140px] z-50 flex h-13 w-13 items-center justify-center rounded-full bg-[#25d366] text-white shadow-xl transition hover:scale-110 hover:bg-[#1eb856] lg:bottom-6 lg:right-6"
+>
+	<Icon name="whatsapp" cls="h-7 w-7" />
+</a>
+
 <!-- Back to top -->
 {#if showTop}
 	<button
 		type="button"
 		aria-label="Back to top"
+		transition:scale={{ duration: 300, start: 0.5 }}
 		onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-		class="fixed right-4 bottom-[76px] z-50 flex h-11 w-11 items-center justify-center rounded-full bg-maroon-900 text-gold-400 shadow-lg transition hover:bg-maroon-800 lg:bottom-6"
+		class="fixed right-4 bottom-[200px] z-50 flex h-11 w-11 items-center justify-center rounded-full bg-maroon-900 text-gold-400 shadow-lg transition hover:bg-maroon-800 lg:bottom-24"
 	>
 		<Icon name="arrow-up" cls="h-5 w-5" />
 	</button>

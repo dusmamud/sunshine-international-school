@@ -68,7 +68,7 @@
 				</tbody>
 			</table>
 		</div>
-		<p class="mt-3 text-sm text-ink/60">Full details on the <a href="/admissions#fees" class="font-bold text-maroon-800 underline">Admissions page</a>.</p>
+		<p class="mt-3 text-sm text-ink/60">Full details on the <a href="/fees" class="font-bold text-maroon-800 underline">Fees page</a>.</p>
 	</Reveal>
 
 	<div class="mt-14 grid gap-10 lg:grid-cols-2">

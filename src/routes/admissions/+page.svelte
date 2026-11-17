@@ -11,6 +11,18 @@ let name=$state(''); let phone=$state(''); let grade=$state(''); let done=$state
 	{#each [{ n: '1', t: 'Enquire', d: 'Submit the enquiry form or call +91 98765 43210.' }, { n: '2', t: 'Visit', d: 'Book a campus tour and meet our counsellors.' }, { n: '3', t: 'Interact', d: 'Age-appropriate interaction / assessment.' }, { n: '4', t: 'Enrol', d: 'Offer letter, documents and fee payment.' }] as s}
 		<div class="rounded-lg border border-ink/10 p-5"><span class="flex h-10 w-10 items-center justify-center rounded-full bg-maroon-800 font-display text-lg font-bold text-gold-400">{s.n}</span><p class="mt-3 font-bold">{s.t}</p><p class="mt-1 text-sm text-ink/65">{s.d}</p></div>
 	{/each}</div></div></Reveal>
+	<Reveal><div class="mt-14"><h2 class="font-display text-2xl font-bold sm:text-3xl">Choose Your Stage</h2>
+	<p class="mt-2 text-sm text-ink/60">Age criteria, seats, documents and the exact process for each stage.</p>
+	<div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+	{#each [{ t: 'Pre-Primary', c: 'Nursery – KG', h: '/admissions/pre-primary' }, { t: 'Primary', c: 'Classes I – V', h: '/admissions/primary' }, { t: 'Middle School', c: 'Classes VI – VIII', h: '/admissions/middle' }, { t: 'High School', c: 'Classes IX – X', h: '/admissions/high' }, { t: 'Senior Secondary', c: 'Classes XI – XII', h: '/admissions/senior-secondary' }] as s}
+		<a href={s.h} class="card-lift block rounded-lg border border-ink/10 bg-white p-5 shadow-sm"><p class="font-display text-lg font-bold">{s.t}</p><p class="mt-1 text-sm text-ink/60">{s.c}</p><span class="mt-3 inline-block text-xs font-extrabold tracking-wider text-maroon-800">VIEW DETAILS →</span></a>
+	{/each}</div>
+	<div class="mt-4 flex flex-wrap gap-3">
+		<a href="/fees" class="inline-flex min-h-11 items-center rounded-sm border border-maroon-800/25 px-4 text-sm font-bold text-maroon-800 transition hover:bg-maroon-50">Full Fee Structure</a>
+		<a href="/scholarships" class="inline-flex min-h-11 items-center rounded-sm border border-maroon-800/25 px-4 text-sm font-bold text-maroon-800 transition hover:bg-maroon-50">Scholarships</a>
+		<a href="/open-day" class="inline-flex min-h-11 items-center rounded-sm border border-maroon-800/25 px-4 text-sm font-bold text-maroon-800 transition hover:bg-maroon-50">Book an Open Day</a>
+		<a href="/prospectus" class="inline-flex min-h-11 items-center rounded-sm border border-maroon-800/25 px-4 text-sm font-bold text-maroon-800 transition hover:bg-maroon-50">Download Prospectus</a>
+	</div></div></Reveal>
 	<Reveal><div id="fees" class="mt-14 scroll-mt-28"><h2 class="font-display text-2xl font-bold sm:text-3xl">Fee Structure (₹ per annum, demo)</h2>
 	<div class="mt-6 overflow-x-auto rounded-lg border border-ink/10"><table class="w-full min-w-[520px] text-left text-sm">
 	<thead class="bg-maroon-800 text-white"><tr><th class="px-4 py-3">Grade</th><th class="px-4 py-3">Tuition</th><th class="px-4 py-3">Admission (one-time)</th></tr></thead>

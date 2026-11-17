@@ -664,3 +664,208 @@ export const newsBodies: Record<string, string[]> = {
 		'Principal Dr. Meera Kapoor said: “Debate teaches children to listen before they speak — that is the skill that will carry them furthest.”'
 	]
 };
+
+// ---- Round 3 data: fees, facilities, tour, exams, scholarships, circulars,
+// safety, e-learning, library, open day, timetables, admission stages.
+// ALL demo/mock data for client presentation.
+export const feeStructure = [
+	{ stage: 'Pre-Primary', classes: 'Nursery – KG', tuition: 48000, admission: 15000, registration: 500, transport: 1500 },
+	{ stage: 'Primary', classes: 'Classes I – V', tuition: 62000, admission: 15000, registration: 500, transport: 1500 },
+	{ stage: 'Middle School', classes: 'Classes VI – VIII', tuition: 72000, admission: 15000, registration: 500, transport: 1500 },
+	{ stage: 'High School', classes: 'Classes IX – X', tuition: 84000, admission: 15000, registration: 500, transport: 1500 },
+	{ stage: 'Senior Secondary', classes: 'Classes XI – XII', tuition: 96000, admission: 15000, registration: 500, transport: 1500 }
+];
+
+export const feeInstalments = [
+	{ term: 'Term 1', due: '10 April 2026', share: '40% of annual tuition', note: 'Payable at admission for new students' },
+	{ term: 'Term 2', due: '10 August 2026', share: '30% of annual tuition', note: 'With transport fee for Aug – Nov' },
+	{ term: 'Term 3', due: '10 December 2026', share: '30% of annual tuition', note: 'With transport fee for Dec – Mar' }
+];
+
+export const paymentOptions = [
+	{ name: 'UPI', detail: 'Pay instantly with any UPI app — Google Pay, PhonePe, Paytm or BHIM.', icon: 'phone' },
+	{ name: 'Credit / Debit Card', detail: 'Visa, Mastercard, RuPay and Amex accepted. No surcharge on school payments.', icon: 'calculator' },
+	{ name: 'NetBanking', detail: 'All major banks supported through the parent portal fee section.', icon: 'laptop' },
+	{ name: 'Cash / Cheque at Office', detail: 'Pay at the school accounts office (Mon – Sat, 8:00 AM – 4:00 PM).', icon: 'building' }
+];
+
+export const facilitiesList = [
+	{ name: 'Smart Classrooms', icon: 'monitor', img: '/images/primary-classroom.webp', desc: '60 air-cooled smart classrooms with interactive panels, digital content and a 1:1 device programme for Classes VI–XII.' },
+	{ name: 'Science Laboratories', icon: 'flask', img: '/images/science-lab.jpg', desc: 'Separate Physics, Chemistry and Biology labs for 10+ practical batches a week, with a dedicated lab assistant in every session.' },
+	{ name: 'Computer Labs', icon: 'laptop', img: '/images/middle-school.jpg', desc: 'Two labs with 80 networked systems, a coding club and AI modules for Classes IX–XII.' },
+	{ name: 'Library', icon: 'book', img: '/images/library.jpg', desc: '20,000+ books, a reading hall for 120 students, and a weekly library period for every class.' },
+	{ name: 'Sports & Athletics', icon: 'trophy', img: '/images/sports-students.webp', desc: 'Football field, basketball court, cricket nets, athletics track and a morning fitness programme.' },
+	{ name: 'Performing Arts', icon: 'music', img: '/images/performing-arts.jpg', desc: 'Music rooms, dance studio, a 800-seat auditorium and the annual day stage.' },
+	{ name: 'Infirmary', icon: 'heart', img: '/images/campus-life.jpg', desc: 'A full-time nurse, a doctor on call, first-aid in every wing and a sick bay with 6 beds.' },
+	{ name: 'Safe Transport', icon: 'bus', img: '/images/school-building.webp', desc: '18 GPS-enabled buses with a trained driver and a lady attendant on every route.' }
+];
+
+export const tourStops = [
+	{ name: 'The Main Gate', img: '/images/school-building.webp', desc: 'A warm welcome at our 10-acre campus — security-checked entry and a shaded parent waiting lounge.' },
+	{ name: 'Smart Classrooms', img: '/images/primary-classroom.webp', desc: 'See a live class in action: interactive panels, group seating and joyful, activity-based learning.' },
+	{ name: 'Science Laboratories', img: '/images/science-lab.jpg', desc: 'Physics, Chemistry and Biology labs where every child experiments hands-on, twice a week.' },
+	{ name: 'Library', img: '/images/library.jpg', desc: '20,000+ books, a reading hall and the reading programme that made us the “reading school” of the neighbourhood.' },
+	{ name: 'Sports Field', img: '/images/sports-students.webp', desc: 'Football field, basketball court, cricket nets and the morning fitness programme.' },
+	{ name: 'Auditorium', img: '/images/performing-arts.jpg', desc: 'Our 800-seat auditorium — home to the annual day, debates, concerts and the school orchestra.' }
+];
+
+export const examTables = [
+	{
+		band: 'Classes VI – VIII',
+		pattern: 'Periodic Tests (20 marks) + Half-Yearly (80) + Annual (80). No detention policy as per CBSE.',
+		rows: [
+			{ exam: 'Periodic Test 1', dates: '03 – 08 Aug 2026', subjects: 'English, Hindi, Maths, Science, Social Science' },
+			{ exam: 'Half-Yearly Examinations', dates: '12 – 21 Oct 2026', subjects: 'All subjects (syllabus: Apr – Sep)' },
+			{ exam: 'Periodic Test 2', dates: '08 – 13 Feb 2027', subjects: 'English, Maths, Science, Social Science' },
+			{ exam: 'Annual Examinations', dates: '15 Feb – 15 Mar 2027', subjects: 'All subjects (full syllabus)' }
+		]
+	},
+	{
+		band: 'Classes IX – X',
+		pattern: 'CBSE pattern: Periodic Tests (5+5), Subject Enrichment (5), Portfolio (5), Annual Exam (80).',
+		rows: [
+			{ exam: 'Periodic Test 1', dates: '03 – 08 Aug 2026', subjects: 'English, Hindi, Maths, Science, Social Science' },
+			{ exam: 'Half-Yearly Examinations', dates: '12 – 21 Oct 2026', subjects: 'All subjects (syllabus: Apr – Sep)' },
+			{ exam: 'Periodic Test 2', dates: '01 – 06 Feb 2027', subjects: 'English, Maths, Science, Social Science' },
+			{ exam: 'Pre-Board Examinations', dates: '01 – 10 Feb 2027', subjects: 'All subjects (full syllabus, Class X only)' },
+			{ exam: 'Annual / Board Examinations', dates: 'From 15 Feb 2027', subjects: 'As per CBSE date sheet' }
+		]
+	},
+	{
+		band: 'Classes XI – XII',
+		pattern: 'Unit Tests (20) + Half-Yearly (70 + practical) + Pre-Boards + CBSE Boards (70 + 30 practical).',
+		rows: [
+			{ exam: 'Unit Test 1', dates: '03 – 08 Aug 2026', subjects: 'Stream subjects (PCM / PCB / Commerce / Humanities)' },
+			{ exam: 'Half-Yearly Examinations', dates: '12 – 21 Oct 2026', subjects: 'All subjects + practicals' },
+			{ exam: 'Unit Test 2', dates: '01 – 06 Feb 2027', subjects: 'Stream subjects' },
+			{ exam: 'Pre-Board Examinations', dates: '01 – 10 Feb 2027', subjects: 'All subjects (full syllabus, Class XII only)' },
+			{ exam: 'Annual / Board Examinations', dates: 'From 15 Feb 2027', subjects: 'As per CBSE date sheet' }
+		]
+	}
+];
+
+export const scholarshipsList = [
+	{ name: 'Merit Scholarship', icon: 'award', cover: 'Up to 50% tuition waiver', who: 'Top 3 rank holders in the Class X / XII board examinations and school toppers of Classes VI–IX.', how: 'Automatic — no separate application. Awarded at the Annual Day.' },
+	{ name: 'Need-Based Scholarship', icon: 'heart', cover: '25% – 50% tuition waiver', who: 'Families with a household income below ₹6 lakh per year, with a strong academic record.', how: 'Apply with income proof and the previous year’s report card by 31 March.' },
+	{ name: 'Sibling Scholarship', icon: 'users', cover: '10% tuition waiver (2nd child)', who: 'Families with two or more children studying at Sunshine at the same time.', how: 'Applied automatically once both children are enrolled.' },
+	{ name: 'Sports & Arts Scholarship', icon: 'trophy', cover: '25% tuition waiver', who: 'Students who have represented the state or nation in a recognised sport, or won a national-level arts competition.', how: 'Apply with certificates and a trial / audition by 31 March.' }
+];
+
+export const circulars = [
+	{ date: '12 Nov 2026', title: 'Admissions Open for Academic Year 2026–27', category: 'Admissions', file: '/downloads/circular-admissions-2026-27.pdf' },
+	{ date: '10 Nov 2026', title: 'Half-Yearly Examination Date Sheet (Classes VI – XII)', category: 'Examinations', file: '/downloads/circular-half-yearly-datesheet.pdf' },
+	{ date: '28 Oct 2026', title: 'Term 1 Fee Due Date — 10 November 2026', category: 'Fees', file: '/downloads/circular-fee-due-date.pdf' },
+	{ date: '20 Oct 2026', title: 'Winter Uniform Compulsory from 01 December 2026', category: 'General', file: '/downloads/circular-winter-uniform.pdf' },
+	{ date: '08 Oct 2026', title: 'Diwali Break: School Closed 24 Oct – 02 Nov 2026', category: 'Holiday', file: '/downloads/circular-diwali-break.pdf' },
+	{ date: '01 Oct 2026', title: 'Annual Sports Day Trials Begin 18 November 2026', category: 'Sports', file: '/downloads/circular-sports-day-trials.pdf' }
+];
+
+export const safetyPoints = [
+	{ name: 'CCTV Coverage', icon: 'eye', desc: '200+ CCTV cameras cover every corridor, classroom entrance, playground and bus bay. Footage is stored for 30 days and reviewed daily by the safety officer.' },
+	{ name: 'Visitor Entry', icon: 'shield', desc: 'Every visitor is registered at the gate with a photo ID and a printed pass, and is escorted by a staff member. Parents use the parent ID card at pick-up.' },
+	{ name: 'Bus Supervision', icon: 'bus', desc: 'Every bus has a trained driver and a lady attendant, GPS tracking for parents, and a first-aid kit. No child is dropped without a parent or guardian at the stop.' },
+	{ name: 'Infirmary & First Aid', icon: 'heart', desc: 'A full-time nurse, a doctor on call, and a first-aider in every wing. The infirmary has 6 beds and an ambulance on standby during school hours.' },
+	{ name: 'Fire & Emergency Drills', icon: 'alert-circle', desc: 'Fire drills every term, an evacuation plan displayed in every classroom, and fire-safety certification renewed annually.' },
+	{ name: 'Anti-Bullying & Counselling', icon: 'users', desc: 'A trained counsellor, a student wellbeing committee, and a confidential reporting box in every wing. Every complaint is followed up within 24 hours.' }
+];
+
+export const eLearning = [
+	{ name: 'DIKSHA (NCERT)', desc: 'NCERT textbooks, videos and practice questions for every class — free, by the Government of India.', href: 'https://diksha.gov.in', tag: 'NCERT' },
+	{ name: 'Khan Academy', desc: 'Free maths, science and computing courses with practice exercises for Classes I–XII.', href: 'https://www.khanacademy.org', tag: 'Free' },
+	{ name: 'NCERT e-Pathshala', desc: 'Official NCERT e-books, audio books and learning material for all subjects.', href: 'https://ncert.nic.in', tag: 'NCERT' },
+	{ name: 'CBSE Academic', desc: 'CBSE curriculum, sample papers and exemplar material for board classes.', href: 'https://cbseacademic.nic.in', tag: 'CBSE' },
+	{ name: 'Scratch — Learn to Code', desc: 'The coding platform our computer classes use for Classes III–VIII storytelling and games.', href: 'https://scratch.mit.edu', tag: 'Coding' },
+	{ name: 'National Digital Library', desc: 'Free books, journals and lectures from IITs and leading Indian universities.', href: 'https://ndl.iitkgp.ac.in', tag: 'Library' }
+];
+
+export const libraryInfo = {
+	timings: [
+		{ who: 'Classes I – V', time: '8:30 AM – 1:00 PM (library periods)' },
+		{ who: 'Classes VI – XII', time: '8:00 AM – 4:00 PM' },
+		{ who: 'Reading hall', time: '8:00 AM – 4:00 PM, Monday to Saturday' }
+	],
+	highlights: [
+		{ title: '20,000+ Books', desc: 'Fiction, non-fiction, reference, comics and magazines in English and Hindi.' },
+		{ title: 'Reading Programme', desc: 'Every child reads one book a week — tracked in the reading diary and celebrated at assembly.' },
+		{ title: 'Book Club', desc: 'The Sunbeam Book Club meets every Friday: reviews, author talks and the annual reading festival.' },
+		{ title: 'Digital Corner', desc: '10 e-readers and a curated list of free e-books for every class.' }
+	]
+};
+
+export const openDaySlots = [
+	{ date: 'Saturday, 29 November 2026', slots: ['10:00 AM', '11:30 AM', '1:00 PM'] },
+	{ date: 'Saturday, 06 December 2026', slots: ['10:00 AM', '11:30 AM', '1:00 PM'] },
+	{ date: 'Saturday, 13 December 2026', slots: ['10:00 AM', '11:30 AM', '1:00 PM'] }
+];
+
+export const timetables = [
+	{
+		stage: 'Pre-Primary', classes: 'Nursery – KG', note: '8:30 AM – 12:30 PM · Play-way learning, no homework',
+		periods: ['8:30 – 9:00  Assembly & Rhymes', '9:00 – 9:40  Language & Phonics', '9:40 – 10:20  Numbers & Play', '10:20 – 10:50  Snack & Story Time', '10:50 – 11:30  Art & Craft', '11:30 – 12:10  Outdoor Play', '12:10 – 12:30  Goodbye Circle']
+	},
+	{
+		stage: 'Primary', classes: 'Classes I – V', note: '8:00 AM – 2:30 PM · 40-minute periods',
+		periods: ['8:00 – 8:20  Assembly', '8:20 – 9:00  English', '9:00 – 9:40  Mathematics', '9:40 – 10:20  EVS / Science', '10:20 – 10:50  Break', '10:50 – 11:30  Hindi', '11:30 – 12:10  Computer / Art', '12:10 – 12:50  Sports / Music', '12:50 – 1:30  Library / Value Education', '1:30 – 2:30  Lunch & Diary']
+	},
+	{
+		stage: 'Middle School', classes: 'Classes VI – VIII', note: '8:00 AM – 3:30 PM · 40-minute periods',
+		periods: ['8:00 – 8:20  Assembly', '8:20 – 9:00  English', '9:00 – 9:40  Mathematics', '9:40 – 10:20  Science', '10:20 – 10:40  Break', '10:40 – 11:20  Social Science', '11:20 – 12:00  Hindi / Sanskrit', '12:00 – 12:40  Computer Science', '12:40 – 1:20  Lunch', '1:20 – 2:00  Art / Music / Dance', '2:00 – 2:40  Physical Education', '2:40 – 3:30  Activity Clubs']
+	},
+	{
+		stage: 'High School', classes: 'Classes IX – X', note: '8:00 AM – 4:00 PM · 40-minute periods + remedial',
+		periods: ['8:00 – 8:20  Assembly', '8:20 – 9:00  Mathematics', '9:00 – 9:40  Science', '9:40 – 10:20  English', '10:20 – 10:40  Break', '10:40 – 11:20  Social Science', '11:20 – 12:00  Hindi / Sanskrit', '12:00 – 12:40  Computer / AI', '12:40 – 1:20  Lunch', '1:20 – 2:00  Science Practical', '2:00 – 2:40  Physical Education', '2:40 – 3:30  Remedial / Doubt Session', '3:30 – 4:00  Diary & Dispersal']
+	},
+	{
+		stage: 'Senior Secondary', classes: 'Classes XI – XII', note: '8:00 AM – 4:00 PM · Stream subjects + competitive mentoring',
+		periods: ['8:00 – 8:20  Assembly', '8:20 – 9:00  Physics / Accountancy', '9:00 – 9:40  Chemistry / Business Studies', '9:40 – 10:20  Mathematics / Economics', '10:20 – 10:40  Break', '10:40 – 11:20  Biology / History', '11:20 – 12:00  English', '12:00 – 12:40  Informatics / Psychology', '12:40 – 1:20  Lunch', '1:20 – 2:00  Practical Labs', '2:00 – 2:40  Competitive Mentoring (JEE / NEET / CUET)', '2:40 – 3:30  Physical Education / Clubs', '3:30 – 4:00  Diary & Dispersal']
+	}
+];
+
+export const admissionStages = [
+	{
+		slug: 'pre-primary', title: 'Pre-Primary', classes: 'Nursery – KG', icon: 'sparkles',
+		age: 'Nursery: 3+ years · KG: 4+ years as on 31 March 2026',
+		seats: '60 seats (2 sections of 30)',
+		docs: ['Birth certificate (original + copy)', 'Aadhaar card of child and parents', '4 passport-size photographs', 'Address proof (electricity bill / Aadhaar)', 'Immunisation record'],
+		process: ['Submit the online enquiry or collect the form from the school office.', 'Friendly interaction with the child — no formal test.', 'Offer letter within 5 working days of the interaction.', 'Document verification and fee payment to confirm the seat.'],
+		feesNote: 'Tuition ₹48,000 / year · Admission ₹15,000 (one-time) · Registration ₹500'
+	},
+	{
+		slug: 'primary', title: 'Primary School', classes: 'Classes I – V', icon: 'book',
+		age: 'Class I: 5+ years as on 31 March 2026',
+		seats: '120 seats across Classes I – V',
+		docs: ['Birth certificate', 'Aadhaar card of child and parents', 'Previous school report card (for Classes II–V)', 'Transfer certificate (for Classes II–V)', '4 passport-size photographs', 'Address proof'],
+		process: ['Submit the online enquiry or the application form.', 'Age-appropriate interaction — reading, numbers and a chat.', 'Offer letter within 5 working days.', 'Document verification and fee payment to confirm the seat.'],
+		feesNote: 'Tuition ₹62,000 / year · Admission ₹15,000 (one-time) · Registration ₹500'
+	},
+	{
+		slug: 'middle', title: 'Middle School', classes: 'Classes VI – VIII', icon: 'flask',
+		age: 'Class VI: 10+ years as on 31 March 2026',
+		seats: '90 seats across Classes VI – VIII',
+		docs: ['Birth certificate', 'Aadhaar card of child and parents', 'Previous class report card', 'Transfer certificate', '4 passport-size photographs', 'Address proof'],
+		process: ['Submit the online enquiry or the application form.', 'Written assessment in English, Mathematics and Science (60 minutes).', 'Interaction with the child and parents.', 'Offer letter and fee payment to confirm the seat.'],
+		feesNote: 'Tuition ₹72,000 / year · Admission ₹15,000 (one-time) · Registration ₹500'
+	},
+	{
+		slug: 'high', title: 'High School', classes: 'Classes IX – X', icon: 'gradcap',
+		age: 'Class IX: 13+ years as on 31 March 2026',
+		seats: '60 seats across Classes IX – X',
+		docs: ['Birth certificate', 'Aadhaar card of child and parents', 'Class VIII report card', 'Transfer certificate', '4 passport-size photographs', 'Address proof'],
+		process: ['Submit the online enquiry or the application form.', 'Written assessment in English, Mathematics and Science (90 minutes).', 'Interaction with the child and parents.', 'Offer letter and fee payment to confirm the seat.'],
+		feesNote: 'Tuition ₹84,000 / year · Admission ₹15,000 (one-time) · Registration ₹500'
+	},
+	{
+		slug: 'senior-secondary', title: 'Senior Secondary', classes: 'Classes XI – XII', icon: 'trophy',
+		age: 'Class XI: 15+ years as on 31 March 2026 · Streams: Science (PCM / PCB), Commerce, Humanities',
+		seats: '120 seats across 3 streams (40 per stream)',
+		docs: ['Birth certificate', 'Aadhaar card of child and parents', 'Class X board marksheet', 'Transfer certificate', '4 passport-size photographs', 'Address proof', 'Migration certificate (for other boards)'],
+		process: ['Submit the online enquiry or the application form.', 'Stream counselling with our counsellor and subject teachers.', 'Written assessment in stream subjects (90 minutes).', 'Offer letter and fee payment to confirm the seat.'],
+		feesNote: 'Tuition ₹96,000 / year · Admission ₹15,000 (one-time) · Registration ₹500'
+	}
+];
+
+export const demoStudents = [
+	{ adm: 'SIS2026001', name: 'Aarav Verma', cls: 'Class VI – B', due: 28800, term: 'Term 2 (2026–27)', transport: 6000 },
+	{ adm: 'SIS2026014', name: 'Diya Kapoor', cls: 'Class IX – A', due: 33600, term: 'Term 2 (2026–27)', transport: 6000 },
+	{ adm: 'SIS2026027', name: 'Kabir Singh', cls: 'Class XI – Science', due: 38400, term: 'Term 2 (2026–27)', transport: 0 }
+];

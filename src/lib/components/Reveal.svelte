@@ -1,7 +1,12 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 
-	let { children, cls = '' }: { children: Snippet; cls?: string } = $props();
+	let {
+		children,
+		cls = '',
+		delay = 0,
+		variant = 'up'
+	}: { children: Snippet; cls?: string; delay?: number; variant?: 'up' | 'scale' | 'fade' } = $props();
 	let el: HTMLDivElement;
 
 	$effect(() => {
@@ -21,6 +26,6 @@
 	});
 </script>
 
-<div bind:this={el} class="reveal {cls}">
+<div bind:this={el} class="reveal {cls}" data-variant={variant} style="transition-delay: {delay}ms">
 	{@render children()}
 </div>

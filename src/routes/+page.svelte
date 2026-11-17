@@ -75,12 +75,21 @@
 		aria-hidden="true"
 		class="hero-kenburns pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25"
 	/>
-	<div class="relative mx-auto grid max-w-7xl gap-8 px-4 pt-10 pb-12 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:px-8 lg:pt-14">
+	<div
+		class="hero-drift pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-gold-500/20 blur-3xl"
+		aria-hidden="true"
+	></div>
+	<div
+		class="hero-drift pointer-events-none absolute -bottom-32 -left-24 h-80 w-80 rounded-full bg-maroon-800/10 blur-3xl"
+		aria-hidden="true"
+	></div>
+	<div class="relative mx-auto grid max-w-7xl gap-8 px-4 pt-10 pb-12 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:px-8 lg:pt-14 lg:pb-24">
 		<div class="fade-up min-w-0">
 			<p class="text-xs font-extrabold tracking-[0.3em] text-maroon-800">WHERE YOUNG MINDS</p>
 			<h1 class="mt-3 font-display text-5xl leading-[1.05] font-bold text-ink sm:text-6xl lg:text-7xl">
-				Learn. Grow.<br />
-				<span class="text-maroon-800">Succeed.</span>
+				<span class="hero-word" style="--d: 0.05s">Learn.</span>
+				<span class="hero-word" style="--d: 0.18s">Grow.</span><br />
+				<span class="hero-word text-maroon-800" style="--d: 0.31s">Succeed.</span>
 			</h1>
 			<p class="mt-5 max-w-md leading-relaxed text-ink/70">
 				Empowering students with knowledge, values and skills to thrive in a changing world.
@@ -88,15 +97,17 @@
 			<div class="mt-7 flex flex-wrap gap-3">
 				<a
 					href="/admissions"
-					class="inline-flex min-h-12 items-center rounded-sm bg-maroon-800 px-6 text-sm font-extrabold tracking-wide text-white transition hover:bg-maroon-700"
+					class="btn-shine group inline-flex min-h-12 items-center gap-2 rounded-sm bg-maroon-800 px-6 text-sm font-extrabold tracking-wide text-white transition hover:bg-maroon-700"
 				>
 					ADMISSIONS OPEN 2024-25
+					<Icon name="arrow-right" cls="h-4 w-4 transition-transform group-hover:translate-x-1" />
 				</a>
 				<a
-					href="/contact"
-					class="inline-flex min-h-12 items-center rounded-sm border-2 border-maroon-800 px-6 text-sm font-extrabold tracking-wide text-maroon-800 transition hover:bg-maroon-50"
+					href="/open-day"
+					class="group inline-flex min-h-12 items-center gap-2 rounded-sm border-2 border-maroon-800 px-6 text-sm font-extrabold tracking-wide text-maroon-800 transition hover:bg-maroon-50"
 				>
 					TAKE A CAMPUS TOUR
+					<Icon name="arrow-right" cls="h-4 w-4 transition-transform group-hover:translate-x-1" />
 				</a>
 			</div>
 			<div class="mt-10 grid max-w-lg grid-cols-3 gap-4 sm:grid-cols-5">
@@ -111,15 +122,15 @@
 			</div>
 		</div>
 
-		<div class="min-w-0">
+		<div class="relative min-w-0">
 			<img
 				src="/images/hero-students.webp"
 				alt="Two smiling Sunshine International School students in maroon blazers in front of the school"
-				class="h-[24rem] w-full rounded-lg object-cover object-top shadow-xl sm:h-[26rem] sm:object-center"
+				class="h-[24rem] w-full rounded-lg object-cover object-top shadow-xl sm:h-[26rem] sm:object-center lg:h-[30rem]"
 				fetchpriority="high"
 			/>
-			<!-- Enquiry card -->
-			<div class="mt-4 overflow-hidden rounded-lg bg-white shadow-xl ring-1 ring-maroon-800/10">
+			<!-- Enquiry card — overlaps the photo's bottom-right on desktop, stacks below on mobile -->
+			<div class="mt-4 overflow-hidden rounded-lg bg-white shadow-xl ring-1 ring-maroon-800/10 lg:absolute lg:-bottom-10 lg:right-2 lg:mt-0 lg:w-[340px]">
 				<div class="bg-maroon-800 px-5 py-4 text-white">
 					<h2 class="text-lg font-extrabold tracking-wide">ENQUIRE NOW</h2>
 					<p class="text-xs text-white/75">We will get in touch with you!</p>
@@ -172,7 +183,7 @@
 							</select>
 							{#if errors.grade}<p class="mt-1 text-xs text-red-700">{errors.grade}</p>{/if}
 						</div>
-						<button type="submit" class="min-h-12 w-full rounded-sm bg-maroon-800 text-sm font-extrabold tracking-wide text-white transition hover:bg-maroon-700">
+						<button type="submit" class="btn-shine min-h-12 w-full rounded-sm bg-maroon-800 text-sm font-extrabold tracking-wide text-white transition hover:bg-maroon-700">
 							SUBMIT ENQUIRY
 						</button>
 						<p class="text-center text-[0.68rem] text-ink/45">Demo form — no data is sent anywhere.</p>
@@ -214,22 +225,22 @@
 			</div>
 		</div>
 	</Reveal>
-	<Reveal>
-		<div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-			{#each welcomeStats as s}
-				<div class="min-w-0 rounded-lg border border-maroon-800/10 bg-cream px-3 py-5 text-center">
+	<div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+		{#each welcomeStats as s, i}
+			<Reveal cls="min-w-0" delay={i * 80} variant="scale">
+				<div class="h-full rounded-lg border border-maroon-800/10 bg-cream px-3 py-5 text-center">
 					<Icon name={s.icon} cls="mx-auto h-7 w-7 text-maroon-800" />
 					<p class="mt-2 font-display text-2xl font-bold text-maroon-800 sm:text-3xl">
 						<CountUp value={s.value} suffix={s.suffix} />
 					</p>
 					<p class="mt-1 text-xs leading-snug font-semibold text-ink/65">{s.label}</p>
 				</div>
-			{/each}
-		</div>
-	</Reveal>
+			</Reveal>
+		{/each}
+	</div>
 	<Reveal>
 		<div class="mt-8 flex flex-wrap items-center justify-center gap-2">
-			{#each [{ label: 'Mandatory Disclosure', href: '/mandatory-disclosure' }, { label: 'Board Results', href: '/board-results' }, { label: 'Academic Calendar', href: '/academic-calendar' }, { label: 'Faculty', href: '/faculty' }, { label: 'Notice Board', href: '/notice-board' }, { label: 'Downloads', href: '/downloads' }, { label: 'Transport', href: '/transport' }, { label: 'FAQ', href: '/faq' }] as q}
+			{#each [{ label: 'Fees', href: '/fees' }, { label: 'Pay Fees Online', href: '/fee-payment' }, { label: 'Scholarships', href: '/scholarships' }, { label: 'Open Day', href: '/open-day' }, { label: 'Virtual Tour', href: '/virtual-tour' }, { label: 'Facilities', href: '/facilities' }, { label: 'Examinations', href: '/examination' }, { label: 'Timetables', href: '/timetable' }, { label: 'E-Learning', href: '/e-learning' }, { label: 'Library', href: '/library' }, { label: 'Circulars', href: '/circulars' }, { label: 'Campus Safety', href: '/safety' }, { label: 'Mandatory Disclosure', href: '/mandatory-disclosure' }, { label: 'Board Results', href: '/board-results' }, { label: 'Academic Calendar', href: '/academic-calendar' }, { label: 'Faculty', href: '/faculty' }, { label: 'Notice Board', href: '/notice-board' }, { label: 'Downloads', href: '/downloads' }, { label: 'Transport', href: '/transport' }, { label: 'FAQ', href: '/faq' }] as q}
 				<a href={q.href} class="inline-flex min-h-11 items-center rounded-full border border-maroon-800/25 bg-white px-4 text-xs font-extrabold tracking-wider text-maroon-800 transition hover:border-maroon-800 hover:bg-maroon-800 hover:text-white">{q.label}</a>
 			{/each}
 		</div>
@@ -241,24 +252,25 @@
 			<div class="text-center">
 				<p class="text-xs font-extrabold tracking-[0.3em] text-maroon-800">OUR ACADEMIC PROGRAMS</p>
 				<h2 class="mt-3 font-display text-3xl font-bold text-ink sm:text-4xl">Programs Designed for Every Stage</h2>
+				<span class="gold-rule center mt-4" aria-hidden="true"></span>
 			</div>
 		</Reveal>
-		<div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+		<div class="mt-12 grid gap-6 pt-5 sm:grid-cols-2 lg:grid-cols-5">
 			{#each programs as p, i}
-				<Reveal cls="min-w-0">
-					<article class="group h-full overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-ink/5 transition hover:shadow-lg">
-						<div class="relative">
-							<img src={p.img} alt="{p.title} at Sunshine International School" class="h-44 w-full object-cover" loading="lazy" />
-							<span class="absolute -bottom-5 left-4 flex h-10 w-10 items-center justify-center rounded-full bg-maroon-800 text-white shadow">
+				<Reveal cls="min-w-0" delay={i * 100}>
+					<article class="card-lift group relative h-full overflow-visible rounded-lg bg-white shadow-sm ring-1 ring-ink/5">
+						<div class="relative overflow-hidden rounded-t-lg">
+							<img src={p.img} alt="{p.title} at Sunshine International School" class="h-44 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+							<span class="absolute -top-5 left-4 flex h-10 w-10 items-center justify-center rounded-full bg-maroon-800 text-white shadow-lg ring-4 ring-cream/70">
 								<Icon name={p.icon} cls="h-5 w-5" />
 							</span>
 						</div>
-						<div class="px-4 pt-8 pb-5">
+						<div class="px-4 pt-5 pb-5">
 							<h3 class="font-display text-lg font-bold text-ink">{p.title}</h3>
 							<p class="mt-1 text-sm font-bold text-maroon-800">{p.tagline}</p>
 							<p class="mt-2 text-sm leading-relaxed text-ink/65">{p.text}</p>
-							<a href="/academics#{p.id}" class="mt-3 inline-flex min-h-11 items-center gap-1 text-xs font-extrabold tracking-wider text-maroon-800">
-								READ MORE <Icon name="arrow-right" cls="h-3.5 w-3.5" />
+							<a href="/admissions/{p.id === 'pre-primary' ? 'pre-primary' : p.id === 'primary' ? 'primary' : p.id === 'middle' ? 'middle' : p.id === 'high' ? 'high' : 'senior-secondary'}" class="group/link mt-3 inline-flex min-h-11 items-center gap-1 text-xs font-extrabold tracking-wider text-maroon-800">
+								READ MORE <Icon name="arrow-right" cls="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
 							</a>
 						</div>
 					</article>
@@ -287,19 +299,20 @@
 		<div class="text-center">
 			<p class="text-xs font-extrabold tracking-[0.3em] text-maroon-800">BEYOND CLASSROOMS</p>
 			<h2 class="mt-3 font-display text-3xl font-bold text-ink sm:text-4xl">Holistic Development Through Activities</h2>
+			<span class="gold-rule center mt-4" aria-hidden="true"></span>
 		</div>
 	</Reveal>
-	<div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-		{#each activities as a}
-			<Reveal cls="min-w-0">
-				<a href="/campus-life" class="group block overflow-hidden rounded-lg shadow-sm ring-1 ring-ink/5 transition hover:shadow-lg">
-					<div class="relative">
+	<div class="mt-10 grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+		{#each activities as a, i}
+			<Reveal cls="min-w-0" delay={i % 3 * 100}>
+				<a href="/campus-life" class="card-lift group relative block overflow-visible rounded-lg shadow-sm ring-1 ring-ink/5">
+					<div class="overflow-hidden rounded-lg">
 						<img src={a.img} alt="{a.title} at Sunshine International School" class="h-52 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
-						<span class="absolute bottom-3 left-3 flex items-center gap-2 rounded-full bg-maroon-800 py-1.5 pr-4 pl-1.5 text-sm font-bold text-white shadow">
-							<span class="flex h-7 w-7 items-center justify-center rounded-full bg-white/15"><Icon name={a.icon} cls="h-4 w-4" /></span>
-							{a.title}
-						</span>
 					</div>
+					<span class="absolute -bottom-4 left-3 flex items-center gap-2 rounded-full bg-maroon-800 py-1.5 pr-4 pl-1.5 text-sm font-bold text-white shadow-lg ring-4 ring-white">
+						<span class="flex h-7 w-7 items-center justify-center rounded-full bg-white/15"><Icon name={a.icon} cls="h-4 w-4" /></span>
+						{a.title}
+					</span>
 				</a>
 			</Reveal>
 		{/each}
@@ -310,9 +323,12 @@
 <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
 	<div class="grid gap-6 lg:grid-cols-3">
 		<Reveal cls="min-w-0">
-			<div class="h-full rounded-lg border border-ink/10 bg-white p-6 shadow-sm">
+			<div class="card-lift h-full rounded-lg border border-ink/10 bg-white p-6 shadow-sm">
 				<h3 class="text-xs font-extrabold tracking-[0.25em] text-maroon-800">WHAT PARENTS SAY</h3>
 				<Icon name="quote" cls="mt-4 h-8 w-8 text-gold-500" />
+				<div class="mt-3 flex gap-0.5" aria-label="Rated 5 out of 5 stars">
+					{#each Array(5) as _}<Icon name="star" cls="h-4 w-4 text-gold-500" />{/each}
+				</div>
 				<blockquote class="mt-3 leading-relaxed text-ink/75">“{testimonial.quote}”</blockquote>
 				<div class="mt-5 flex items-center gap-3">
 					<span class="flex h-12 w-12 items-center justify-center rounded-full bg-maroon-800 font-display text-lg font-bold text-gold-400">PS</span>
@@ -344,13 +360,23 @@
 			</div>
 		</Reveal>
 		<Reveal cls="min-w-0">
-			<div class="flex h-full flex-col justify-between rounded-lg bg-maroon-800 p-6 text-white shadow-sm">
-				<div>
+			<div class="card-lift relative flex h-full flex-col justify-between overflow-hidden rounded-lg bg-maroon-800 p-6 text-white shadow-sm">
+				<svg class="pointer-events-none absolute -right-4 -bottom-2 h-40 w-56 text-white/10" viewBox="0 0 220 140" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+					<path d="M10 130 V50 L60 20 L110 50 V130" />
+					<path d="M60 20 V130" />
+					<path d="M110 130 V70 L160 40 L210 70 V130" />
+					<path d="M25 130 V95 a10 10 0 0 1 20 0 V130" />
+					<path d="M75 130 V95 a10 10 0 0 1 20 0 V130" />
+					<path d="M130 130 V100 a10 10 0 0 1 20 0 V130" />
+					<path d="M175 130 V100 a10 10 0 0 1 20 0 V130" />
+					<path d="M10 130 H210" />
+				</svg>
+				<div class="relative">
 					<h3 class="font-display text-2xl font-bold">SCHEDULE A CAMPUS TOUR</h3>
 					<p class="mt-2 text-sm leading-relaxed text-white/75">Visit the campus and experience the SIS difference in person.</p>
 				</div>
-				<a href="/admissions#visit" class="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-sm bg-white px-6 text-sm font-extrabold tracking-wide text-maroon-800 transition hover:bg-gold-300">
-					BOOK YOUR TOUR <Icon name="calendar" cls="h-4 w-4" />
+				<a href="/open-day" class="btn-shine group relative mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-sm bg-white px-6 text-sm font-extrabold tracking-wide text-maroon-800 transition hover:bg-gold-300">
+					BOOK YOUR TOUR <Icon name="calendar" cls="h-4 w-4 transition-transform group-hover:translate-x-1" />
 				</a>
 			</div>
 		</Reveal>

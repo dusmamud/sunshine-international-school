@@ -21,6 +21,7 @@
 		</div>
 		<div class="flex shrink-0 items-center gap-3 sm:gap-4">
 			<a href="/mandatory-disclosure" class="hidden font-bold text-gold-300 hover:text-gold-400 lg:inline">Mandatory Disclosure</a>
+			<a href="/hi" class="hover:text-gold-300">हिन्दी</a>
 			<a href="/parent-portal" class="hover:text-gold-300">Parent Portal</a>
 			<a href="/careers" class="hidden hover:text-gold-300 sm:inline">Careers</a>
 			<a href="/alumni" class="hidden hover:text-gold-300 sm:inline">Alumni</a>
