@@ -1,19 +1,16 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
 	import { imgSrcset } from '#lib/images';
 	import Icon from '#lib/components/Icon.svelte';
 	import Reveal from '#lib/components/Reveal.svelte';
 	import CountUp from '#lib/components/CountUp.svelte';
 
-	// This page is in Hindi: declare lang="hi" on <html> (app.html stays lang="en"
-	// for the rest of the site) and restore it when leaving the page.
-	onMount(() => {
-		document.documentElement.lang = 'hi';
-	});
-	onDestroy(() => {
-		document.documentElement.lang = 'en';
-	});
-
+	// This page is in Hindi: lang="hi" is set by the literal <script> in
+	// <svelte:head> below (plain HTML output, prerender-safe) and by the
+	// layout's $effect, which restores "en" when navigating away.
+	// (Do NOT use onDestroy here: Svelte 5 runs onDestroy on the server
+	// during prerender, and `document` does not exist there — that
+	// crashed the 2026-11-18 build with "ReferenceError: document is
+	// not defined" on /hi.)
 	let parentName = $state('');
 	let phone = $state('');
 	let grade = $state('');

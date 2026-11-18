@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import { onNavigate } from '$app/navigation';
+	import { page } from '$app/state';
 	import { scale } from 'svelte/transition';
 	import TopBar from '#lib/components/TopBar.svelte';
 	import Header from '#lib/components/Header.svelte';
@@ -23,6 +24,13 @@
 	});
 
 	let showTop = $state(false);
+
+	// Keep <html lang> in sync with the route: /hi is Hindi, everything
+	// else is English. $effect runs only in the browser, never during
+	// prerender, so `document` is safe here.
+	$effect(() => {
+		document.documentElement.lang = page.url.pathname === '/hi' ? 'hi' : 'en';
+	});
 
 	$effect(() => {
 		const onScroll = () => {
