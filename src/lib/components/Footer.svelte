@@ -40,7 +40,7 @@
 			</div>
 
 			<nav aria-label="Quick links">
-				<h3 class="text-xs font-extrabold tracking-[0.25em] text-gold-400">QUICK LINKS</h3>
+				<h2 class="text-xs font-extrabold tracking-[0.25em] text-gold-400">QUICK LINKS</h2>
 				<ul class="mt-4 space-y-2.5 text-sm">
 					{#each [{ label: 'Home', href: '/' }, { label: 'About Us', href: '/about' }, { label: 'Academics', href: '/academics' }, { label: 'Campus Life', href: '/campus-life' }, { label: 'Admissions', href: '/admissions' }, { label: 'Gallery', href: '/gallery' }, { label: 'Mandatory Disclosure', href: '/mandatory-disclosure' }, { label: 'Contact Us', href: '/contact' }] as l}
 						<li>
@@ -51,7 +51,7 @@
 			</nav>
 
 			<nav aria-label="Academics">
-				<h3 class="text-xs font-extrabold tracking-[0.25em] text-gold-400">ACADEMICS</h3>
+				<h2 class="text-xs font-extrabold tracking-[0.25em] text-gold-400">ACADEMICS</h2>
 				<ul class="mt-4 space-y-2.5 text-sm">
 					{#each [{ label: 'Curriculum', href: '/academics' }, { label: 'Academic Calendar', href: '/academic-calendar' }, { label: 'Board Results', href: '/board-results' }, { label: 'Examinations', href: '/examination' }, { label: 'Timetables', href: '/timetable' }, { label: 'Faculty', href: '/faculty' }, { label: 'Library', href: '/library' }, { label: 'E-Learning', href: '/e-learning' }, { label: 'Notice Board', href: '/notice-board' }] as l}
 						<li><a href={l.href} class="text-white/75 transition hover:text-gold-300">{l.label}</a></li>
@@ -60,7 +60,7 @@
 			</nav>
 
 			<nav aria-label="Admissions">
-				<h3 class="text-xs font-extrabold tracking-[0.25em] text-gold-400">ADMISSIONS</h3>
+				<h2 class="text-xs font-extrabold tracking-[0.25em] text-gold-400">ADMISSIONS</h2>
 				<ul class="mt-4 space-y-2.5 text-sm">
 					{#each [{ label: 'Admission Process', href: '/admissions#process' }, { label: 'Fee Structure', href: '/fees' }, { label: 'Pay Fees Online', href: '/fee-payment' }, { label: 'Scholarships', href: '/scholarships' }, { label: 'Open Day', href: '/open-day' }, { label: 'Prospectus', href: '/prospectus' }, { label: 'Transport', href: '/transport' }, { label: 'Downloads', href: '/downloads' }, { label: 'FAQ', href: '/faq' }] as l}
 						<li><a href={l.href} class="text-white/75 transition hover:text-gold-300">{l.label}</a></li>
@@ -69,7 +69,7 @@
 			</nav>
 
 			<div>
-				<h3 class="text-xs font-extrabold tracking-[0.25em] text-gold-400">CONTACT US</h3>
+				<h2 class="text-xs font-extrabold tracking-[0.25em] text-gold-400">CONTACT US</h2>
 				<ul class="mt-4 space-y-3 text-sm text-white/75">
 					<li class="flex gap-2.5">
 						<Icon name="pin" cls="mt-0.5 h-4 w-4 shrink-0 text-gold-400" />
@@ -97,7 +97,7 @@
 					</li>
 				</ul>
 
-				<h3 class="mt-6 text-xs font-extrabold tracking-[0.25em] text-gold-400">NEWSLETTER</h3>
+				<h2 class="mt-6 text-xs font-extrabold tracking-[0.25em] text-gold-400">NEWSLETTER</h2>
 				{#if done}
 					<p class="mt-3 rounded-md bg-white/10 px-4 py-3 text-sm text-gold-300">
 						Thank you! You are subscribed to school updates.

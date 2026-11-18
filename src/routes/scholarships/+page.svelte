@@ -5,6 +5,20 @@
 	import { scholarshipsList } from '#lib/data/more';
 </script>
 
+<svelte:head>
+	<meta name="description" content="Scholarships at Sunshine International School, New Delhi — merit, need-based, sibling and sports &amp; arts awards that make a Sunshine education affordable." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/scholarships" />
+	<meta property="og:title" content="Scholarships | Sunshine International School" />
+	<meta property="og:description" content="Scholarships at Sunshine International School, New Delhi — merit, need-based, sibling and sports &amp; arts awards that make a Sunshine education affordable." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/scholarships" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Scholarships | Sunshine International School" />
+	<meta name="twitter:description" content="Scholarships at Sunshine International School, New Delhi — merit, need-based, sibling and sports &amp; arts awards that make a Sunshine education affordable." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Scholarships"
 	subtitle="Talent and effort deserve support — four scholarships that make a Sunshine education more affordable. (Demo scheme.)"

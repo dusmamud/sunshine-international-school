@@ -12,6 +12,7 @@
 		announcements,
 		testimonial
 	} from '#lib/data/site';
+	import { imgWidth, imgHeight, imgSrcset } from '#lib/images';
 
 	// Enquiry form (demo only — no backend; success state is local)
 	let parentName = $state('');
@@ -35,8 +36,13 @@
 	const jsonLd = {
 		'@context': 'https://schema.org',
 		'@type': 'School',
+		'@id': 'https://sunshine-international-school.pages.dev/#school',
 		name: 'Sunshine International School',
 		url: 'https://sunshine-international-school.pages.dev/',
+		description:
+			'Sunshine International School, New Delhi — empowering students with knowledge, values and skills to thrive. Admissions open 2026-27, Nursery to Class XII.',
+		image: 'https://sunshine-international-school.pages.dev/images/hero-students.webp',
+		logo: 'https://sunshine-international-school.pages.dev/favicon.svg',
 		telephone: '+91-98765-43210',
 		email: 'info@sunshineschool.edu.in',
 		address: {
@@ -45,7 +51,13 @@
 			addressLocality: 'New Delhi',
 			postalCode: '110001',
 			addressCountry: 'IN'
-		}
+		},
+		geo: {
+			'@type': 'GeoCoordinates',
+			latitude: 28.6315,
+			longitude: 77.2167
+		},
+		openingHours: 'Mo-Sa 08:00-16:00'
 	};
 </script>
 
@@ -53,7 +65,7 @@
 	<title>Sunshine International School, New Delhi | Nurturing Minds. Shaping Futures.</title>
 	<meta
 		name="description"
-		content="Sunshine International School, New Delhi — empowering students with knowledge, values and skills to thrive in a changing world. Admissions open 2026-27, Nursery to Class XII."
+		content="Sunshine International School, New Delhi — empowering students with knowledge, values and skills to thrive. Admissions open 2026-27, Nursery to Class XII."
 	/>
 	<link rel="canonical" href="https://sunshine-international-school.pages.dev/" />
 	<meta property="og:title" content="Sunshine International School, New Delhi" />
@@ -64,6 +76,10 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://sunshine-international-school.pages.dev/" />
 	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Sunshine International School, New Delhi" />
+	<meta name="twitter:description" content="Learn. Grow. Succeed. Admissions open 2026-27." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
 	{@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`}
 </svelte:head>
 
@@ -73,6 +89,11 @@
 		src="/images/main-gate.webp"
 		alt=""
 		aria-hidden="true"
+		width="2288"
+		height="1104"
+		srcset={imgSrcset('/images/main-gate.webp')}
+		sizes="100vw"
+		fetchpriority="low"
 		class="hero-kenburns pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25"
 	/>
 	<div
@@ -126,6 +147,10 @@
 			<img
 				src="/images/hero-students.webp"
 				alt="Two smiling Sunshine International School students in maroon blazers in front of the school"
+				width="1920"
+				height="1280"
+				srcset={imgSrcset('/images/hero-students.webp')}
+				sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 640px"
 				class="h-[24rem] w-full rounded-lg object-cover object-top shadow-xl sm:h-[26rem] sm:object-center lg:h-[30rem]"
 				fetchpriority="high"
 			/>
@@ -211,7 +236,7 @@
 <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
 	<Reveal>
 		<div class="grid items-center gap-10 lg:grid-cols-2">
-			<img src="/images/main-gate.webp" alt="Sunshine International School building, New Delhi" class="h-72 w-full rounded-lg object-cover shadow-lg sm:h-96" loading="lazy" />
+			<img src="/images/main-gate.webp" alt="Sunshine International School building, New Delhi" width="2288" height="1104" srcset={imgSrcset('/images/main-gate.webp')} sizes="(max-width: 640px) 100vw, 600px" class="h-72 w-full rounded-lg object-cover shadow-lg sm:h-96" loading="lazy" />
 			<div class="min-w-0">
 				<p class="text-xs font-extrabold tracking-[0.3em] text-maroon-800">WELCOME TO SIS</p>
 				<h2 class="mt-3 font-display text-3xl leading-tight font-bold text-ink sm:text-4xl">
@@ -262,7 +287,7 @@
 				<Reveal cls="min-w-0" delay={i * 100}>
 					<article class="card-lift group relative h-full overflow-visible rounded-lg bg-white shadow-sm ring-1 ring-ink/5">
 						<div class="relative overflow-hidden rounded-t-lg">
-							<img src={p.img} alt="{p.title} at Sunshine International School" class="h-44 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+							<img src={p.img} alt="{p.title} at Sunshine International School" width={imgWidth(p.img)} height={imgHeight(p.img)} srcset={imgSrcset(p.img)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" class="h-44 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
 							<span class="absolute -top-5 left-4 flex h-10 w-10 items-center justify-center rounded-full bg-maroon-800 text-white shadow-lg ring-4 ring-cream/70">
 								<Icon name={p.icon} cls="h-5 w-5" />
 							</span>
@@ -309,7 +334,7 @@
 			<Reveal cls="min-w-0" delay={i % 3 * 100}>
 				<a href="/campus-life" class="card-lift group relative block overflow-visible rounded-lg shadow-sm ring-1 ring-ink/5">
 					<div class="overflow-hidden rounded-lg">
-						<img src={a.img} alt="{a.title} at Sunshine International School" class="h-52 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+						<img src={a.img} alt="{a.title} at Sunshine International School" width={imgWidth(a.img)} height={imgHeight(a.img)} srcset={imgSrcset(a.img)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" class="h-52 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
 					</div>
 					<span class="absolute -bottom-4 left-3 flex items-center gap-2 rounded-full bg-maroon-800 py-1.5 pr-4 pl-1.5 text-sm font-bold text-white shadow-lg ring-4 ring-white">
 						<span class="flex h-7 w-7 items-center justify-center rounded-full bg-white/15"><Icon name={a.icon} cls="h-4 w-4" /></span>

@@ -10,6 +10,20 @@
 	let shown = $derived(filter === 'All' ? generalFaqs : generalFaqs.filter((f) => f.category === filter));
 </script>
 
+<svelte:head>
+	<meta name="description" content="Frequently asked questions about Sunshine International School, New Delhi — school timings, CBSE affiliation, fees, transport, streams and parent updates." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/faq" />
+	<meta property="og:title" content="Frequently Asked Questions | Sunshine International School" />
+	<meta property="og:description" content="Frequently asked questions about Sunshine International School, New Delhi — school timings, CBSE affiliation, fees, transport, streams and parent updates." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/faq" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Frequently Asked Questions | Sunshine International School" />
+	<meta name="twitter:description" content="Frequently asked questions about Sunshine International School, New Delhi — school timings, CBSE affiliation, fees, transport, streams and parent updates." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Frequently Asked Questions"
 	subtitle="Answers to the questions parents ask us most. Still unsure? Call +91 98765 43210 or visit the Contact page."

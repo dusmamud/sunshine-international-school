@@ -3,6 +3,20 @@
 	import Reveal from '#lib/components/Reveal.svelte';
 </script>
 
+<svelte:head>
+	<meta name="description" content="Cookie Policy of Sunshine International School, New Delhi — what cookies this website uses, why they are used and how you can control them." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/cookie-policy" />
+	<meta property="og:title" content="Cookie Policy | Sunshine International School" />
+	<meta property="og:description" content="Cookie Policy of Sunshine International School, New Delhi — what cookies this website uses, why they are used and how you can control them." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/cookie-policy" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Cookie Policy | Sunshine International School" />
+	<meta name="twitter:description" content="Cookie Policy of Sunshine International School, New Delhi — what cookies this website uses, why they are used and how you can control them." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Cookie Policy"
 	subtitle="What cookies this website uses, why, and how you can control them."

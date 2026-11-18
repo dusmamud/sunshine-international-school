@@ -5,6 +5,20 @@
 	import { busRoutes } from '#lib/data/more';
 </script>
 
+<svelte:head>
+	<meta name="description" content="Transport at Sunshine International School, New Delhi — 18 GPS-enabled buses across Delhi, Noida and Ghaziabad, each with a driver and attendant." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/transport" />
+	<meta property="og:title" content="Transport | Sunshine International School" />
+	<meta property="og:description" content="Transport at Sunshine International School, New Delhi — 18 GPS-enabled buses across Delhi, Noida and Ghaziabad, each with a driver and attendant." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/transport" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Transport | Sunshine International School" />
+	<meta name="twitter:description" content="Transport at Sunshine International School, New Delhi — 18 GPS-enabled buses across Delhi, Noida and Ghaziabad, each with a driver and attendant." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Transport"
 	subtitle="18 GPS-enabled buses across Delhi, Noida and Ghaziabad. Every bus has a trained driver and a lady attendant. All routes and fees are demo data for client presentation."

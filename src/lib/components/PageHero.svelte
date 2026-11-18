@@ -1,13 +1,30 @@
 <script lang="ts">
+	import { page } from '$app/state';
+
 	let {
 		title,
 		subtitle,
 		crumb
 	}: { title: string; subtitle?: string; crumb: { label: string; href?: string }[] } = $props();
+
+	// BreadcrumbList JSON-LD mirroring the visible breadcrumb nav above.
+	// The last crumb has no href (it is the current page), so it uses the page URL.
+	const siteUrl = 'https://sunshine-international-school.pages.dev';
+	const breadcrumbLd = $derived({
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: crumb.map((c, i) => ({
+			'@type': 'ListItem',
+			position: i + 1,
+			name: c.label,
+			item: c.href ? siteUrl + c.href : page.url.href
+		}))
+	});
 </script>
 
 <svelte:head>
 	<title>{title} | Sunshine International School</title>
+	{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbLd)}</script>`}
 </svelte:head>
 
 <section class="relative overflow-hidden bg-maroon-900">

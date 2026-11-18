@@ -4,6 +4,20 @@ import PageHero from '#lib/components/PageHero.svelte';
 let user=$state(''); let pass=$state(''); let logged=$state(false); let err=$state('');
 	function login(e:Event){e.preventDefault(); if(user.trim() && pass.length>=4){logged=true;err='';} else err='Demo login: enter any name and a password of 4+ characters.';}
 </script>
+<svelte:head>
+	<meta name="description" content="Parent Portal of Sunshine International School, New Delhi — attendance, fees, homework and circulars in one place. Demo login, no real data." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/parent-portal" />
+	<meta property="og:title" content="Parent Portal | Sunshine International School" />
+	<meta property="og:description" content="Parent Portal of Sunshine International School, New Delhi — attendance, fees, homework and circulars in one place. Demo login, no real data." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/parent-portal" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Parent Portal | Sunshine International School" />
+	<meta name="twitter:description" content="Parent Portal of Sunshine International School, New Delhi — attendance, fees, homework and circulars in one place. Demo login, no real data." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero title="Parent Portal" subtitle="Attendance, fees, homework and circulars — in one place. Demo login, no real data." crumb={[{ label: 'Home', href: '/' }, { label: 'Parent Portal' }]} />
 <section class="mx-auto max-w-3xl px-4 py-14 sm:px-6">
 	{#if !logged}

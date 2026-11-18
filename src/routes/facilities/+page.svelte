@@ -3,7 +3,22 @@
 	import Reveal from '#lib/components/Reveal.svelte';
 	import Icon from '#lib/components/Icon.svelte';
 	import { facilitiesList } from '#lib/data/more';
+	import { imgWidth, imgHeight, imgSrcset } from '#lib/images';
 </script>
+
+<svelte:head>
+	<meta name="description" content="Facilities at Sunshine International School, New Delhi — a 10-acre campus with smart classrooms, science labs, library, sports and safe transport." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/facilities" />
+	<meta property="og:title" content="Facilities | Sunshine International School" />
+	<meta property="og:description" content="Facilities at Sunshine International School, New Delhi — a 10-acre campus with smart classrooms, science labs, library, sports and safe transport." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/facilities" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/primary-classroom.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Facilities | Sunshine International School" />
+	<meta name="twitter:description" content="Facilities at Sunshine International School, New Delhi — a 10-acre campus with smart classrooms, science labs, library, sports and safe transport." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/primary-classroom.webp" />
+</svelte:head>
 
 <PageHero
 	title="Facilities"
@@ -17,7 +32,7 @@
 			<Reveal cls="min-w-0" delay={i % 3 * 100}>
 				<article class="card-lift group h-full overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-ink/5">
 					<div class="relative overflow-hidden">
-						<img src={f.img} alt={f.name} class="h-52 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+						<img src={f.img} alt={f.name} width={imgWidth(f.img)} height={imgHeight(f.img)} srcset={imgSrcset(f.img)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" class="h-52 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
 						<span class="absolute top-3 left-3 flex h-10 w-10 items-center justify-center rounded-full bg-maroon-800 text-white shadow"><Icon name={f.icon} cls="h-5 w-5" /></span>
 					</div>
 					<div class="p-6">

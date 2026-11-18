@@ -5,6 +5,20 @@
 	import { libraryInfo } from '#lib/data/more';
 </script>
 
+<svelte:head>
+	<meta name="description" content="Library at Sunshine International School, New Delhi — 20,000+ books, a reading hall for 120 students and a programme that makes every child a reader." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/library" />
+	<meta property="og:title" content="Library | Sunshine International School" />
+	<meta property="og:description" content="Library at Sunshine International School, New Delhi — 20,000+ books, a reading hall for 120 students and a programme that makes every child a reader." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/library" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Library | Sunshine International School" />
+	<meta name="twitter:description" content="Library at Sunshine International School, New Delhi — 20,000+ books, a reading hall for 120 students and a programme that makes every child a reader." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Library"
 	subtitle="20,000+ books, a reading hall for 120 students and a programme that makes every child a reader. (Demo content.)"

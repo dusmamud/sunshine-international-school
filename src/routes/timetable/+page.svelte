@@ -6,6 +6,20 @@
 	let stage = $state(0);
 </script>
 
+<svelte:head>
+	<meta name="description" content="Class timetables at Sunshine International School, New Delhi — a school day stage by stage, from assembly and periods to breaks, sports and clubs." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/timetable" />
+	<meta property="og:title" content="Class Timetables | Sunshine International School" />
+	<meta property="og:description" content="Class timetables at Sunshine International School, New Delhi — a school day stage by stage, from assembly and periods to breaks, sports and clubs." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/timetable" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Class Timetables | Sunshine International School" />
+	<meta name="twitter:description" content="Class timetables at Sunshine International School, New Delhi — a school day stage by stage, from assembly and periods to breaks, sports and clubs." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Class Timetables"
 	subtitle="A school day at Sunshine, stage by stage — assemblies, periods, breaks and clubs. (Demo timetables for 2026–27.)"

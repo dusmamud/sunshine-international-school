@@ -5,6 +5,20 @@
 	import { school } from '#lib/data/site';
 </script>
 
+<svelte:head>
+	<meta name="description" content="Prospectus 2026–27 of Sunshine International School, New Delhi — everything about the school in one booklet; download it or ask at the office." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/prospectus" />
+	<meta property="og:title" content="Prospectus 2026–27 | Sunshine International School" />
+	<meta property="og:description" content="Prospectus 2026–27 of Sunshine International School, New Delhi — everything about the school in one booklet; download it or ask at the office." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/prospectus" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Prospectus 2026–27 | Sunshine International School" />
+	<meta name="twitter:description" content="Prospectus 2026–27 of Sunshine International School, New Delhi — everything about the school in one booklet; download it or ask at the office." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Prospectus 2026–27"
 	subtitle="Everything about Sunshine International School in one booklet — download it, or ask for a printed copy at the school office. (Demo prospectus.)"

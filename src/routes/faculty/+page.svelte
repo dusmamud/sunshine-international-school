@@ -4,6 +4,20 @@
 	import { facultyDirectory, teacherSlug } from '#lib/data/more';
 </script>
 
+<svelte:head>
+	<meta name="description" content="Our Faculty at Sunshine International School, New Delhi — 150+ experienced educators, mentors and coaches across every department and wing." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/faculty" />
+	<meta property="og:title" content="Our Faculty | Sunshine International School" />
+	<meta property="og:description" content="Our Faculty at Sunshine International School, New Delhi — 150+ experienced educators, mentors and coaches across every department and wing." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/faculty" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Our Faculty | Sunshine International School" />
+	<meta name="twitter:description" content="Our Faculty at Sunshine International School, New Delhi — 150+ experienced educators, mentors and coaches across every department and wing." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Our Faculty"
 	subtitle="150+ experienced educators, mentors and coaches — average experience 12 years. All profiles are demo data for client presentation."

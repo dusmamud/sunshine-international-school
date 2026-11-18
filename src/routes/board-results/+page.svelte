@@ -7,6 +7,20 @@
 	let current = $derived(boardResults.find((r) => r.year === year) ?? boardResults[0]);
 </script>
 
+<svelte:head>
+	<meta name="description" content="CBSE Class X &amp; XII board results at Sunshine International School, New Delhi — toppers, pass percentages and three years of results." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/board-results" />
+	<meta property="og:title" content="Board Results | Sunshine International School" />
+	<meta property="og:description" content="CBSE Class X &amp; XII board results at Sunshine International School, New Delhi — toppers, pass percentages and three years of results." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/board-results" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Board Results | Sunshine International School" />
+	<meta name="twitter:description" content="CBSE Class X &amp; XII board results at Sunshine International School, New Delhi — toppers, pass percentages and three years of results." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Board Results"
 	subtitle="CBSE Class X & XII results for the last three years. All figures are demo data for client presentation."

@@ -3,6 +3,20 @@
 	import Reveal from '#lib/components/Reveal.svelte';
 </script>
 
+<svelte:head>
+	<meta name="description" content="Alumni of Sunshine International School, New Delhi — Sunshiners across the world, now doctors, engineers, artists and entrepreneurs." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/alumni" />
+	<meta property="og:title" content="Alumni | Sunshine International School" />
+	<meta property="og:description" content="Alumni of Sunshine International School, New Delhi — Sunshiners across the world, now doctors, engineers, artists and entrepreneurs." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/alumni" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Alumni | Sunshine International School" />
+	<meta name="twitter:description" content="Alumni of Sunshine International School, New Delhi — Sunshiners across the world, now doctors, engineers, artists and entrepreneurs." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero title="Alumni" subtitle="Sunshiners across the world — doctors, engineers, artists and entrepreneurs. (Demo profiles.)" crumb={[{ label: 'Home', href: '/' }, { label: 'Alumni' }]} />
 <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
 	<div class="grid gap-4 md:grid-cols-3">

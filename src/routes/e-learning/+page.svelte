@@ -5,6 +5,20 @@
 	import { eLearning } from '#lib/data/more';
 </script>
 
+<svelte:head>
+	<meta name="description" content="E-Learning at Sunshine International School, New Delhi — free, trusted resources our teachers recommend, from NCERT and CBSE to coding and libraries." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/e-learning" />
+	<meta property="og:title" content="E-Learning | Sunshine International School" />
+	<meta property="og:description" content="E-Learning at Sunshine International School, New Delhi — free, trusted resources our teachers recommend, from NCERT and CBSE to coding and libraries." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/e-learning" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="E-Learning | Sunshine International School" />
+	<meta name="twitter:description" content="E-Learning at Sunshine International School, New Delhi — free, trusted resources our teachers recommend, from NCERT and CBSE to coding and libraries." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="E-Learning"
 	subtitle="Free, trusted learning resources our teachers recommend — NCERT, CBSE, coding and the National Digital Library."

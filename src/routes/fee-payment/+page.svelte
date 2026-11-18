@@ -36,6 +36,20 @@
 	const total = $derived(student ? student.due + student.transport : 0);
 </script>
 
+<svelte:head>
+	<meta name="description" content="Pay fees online (demo) at Sunshine International School, New Delhi — look up your ward, check the Term 2 summary and pay by UPI, card or netbanking." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/fee-payment" />
+	<meta property="og:title" content="Pay Fees Online | Sunshine International School" />
+	<meta property="og:description" content="Pay fees online (demo) at Sunshine International School, New Delhi — look up your ward, check the Term 2 summary and pay by UPI, card or netbanking." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/fee-payment" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Pay Fees Online | Sunshine International School" />
+	<meta name="twitter:description" content="Pay fees online (demo) at Sunshine International School, New Delhi — look up your ward, check the Term 2 summary and pay by UPI, card or netbanking." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Pay Fees Online"
 	subtitle="Demo fee payment — look up your ward, check the Term 2 summary and pay by UPI, card or netbanking. No real money moves here."

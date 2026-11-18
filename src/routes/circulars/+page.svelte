@@ -16,6 +16,20 @@
 	);
 </script>
 
+<svelte:head>
+	<meta name="description" content="Circulars from Sunshine International School, New Delhi — official notices from the school office, searchable, with downloadable copies." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/circulars" />
+	<meta property="og:title" content="Circulars | Sunshine International School" />
+	<meta property="og:description" content="Circulars from Sunshine International School, New Delhi — official notices from the school office, searchable, with downloadable copies." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/circulars" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Circulars | Sunshine International School" />
+	<meta name="twitter:description" content="Circulars from Sunshine International School, New Delhi — official notices from the school office, searchable, with downloadable copies." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Circulars"
 	subtitle="Official notices and circulars from the school office — searchable, with downloadable copies. (Demo circulars.)"

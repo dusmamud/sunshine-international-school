@@ -4,6 +4,20 @@ import PageHero from '#lib/components/PageHero.svelte';
 let name=$state(''); let phone=$state(''); let grade=$state(''); let done=$state(false); let err=$state('');
 	function submit(e:Event){e.preventDefault(); if(name.trim().length<2){err='Please enter the parent name.';return;} if(!/^[6-9]\d{9}$/.test(phone.replace(/[\s-]/g,''))){err='Enter a valid 10-digit mobile number.';return;} if(!grade){err='Please choose a grade.';return;} err=''; done=true;}
 </script>
+<svelte:head>
+	<meta name="description" content="Admissions open 2026-27 at Sunshine International School, New Delhi — Nursery to Class XII. See the process, dates, fees and how to enquire." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/admissions" />
+	<meta property="og:title" content="Admissions | Sunshine International School" />
+	<meta property="og:description" content="Admissions open 2026-27 at Sunshine International School, New Delhi — Nursery to Class XII. See the process, dates, fees and how to enquire." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/admissions" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Admissions | Sunshine International School" />
+	<meta name="twitter:description" content="Admissions open 2026-27 at Sunshine International School, New Delhi — Nursery to Class XII. See the process, dates, fees and how to enquire." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero title="Admissions" subtitle="Admissions open for 2026-27 — Nursery to Class XII. (Demo fees and dates.)" crumb={[{ label: 'Home', href: '/' }, { label: 'Admissions' }]} />
 <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
 	<Reveal><div id="process"><h2 class="font-display text-2xl font-bold sm:text-3xl">Admission Process</h2>
@@ -34,9 +48,12 @@ let name=$state(''); let phone=$state(''); let grade=$state(''); let done=$state
 	<h2 class="font-display text-2xl font-bold">Enquire Now</h2>
 	{#if done}<p class="mt-3 rounded-md bg-white p-4 font-bold text-maroon-800">Thank you, {name.trim()}! Your enquiry for {grade} was received (demo).</p>
 	{:else}<form class="mt-4 grid gap-3 sm:grid-cols-3" onsubmit={submit} novalidate>
-	<input bind:value={name} placeholder="Parent's Name" class="rounded-sm border border-ink/20 px-3 py-3 text-sm" />
-	<input bind:value={phone} type="tel" placeholder="Phone Number" class="rounded-sm border border-ink/20 px-3 py-3 text-sm" />
-	<select bind:value={grade} class="rounded-sm border border-ink/20 bg-white px-3 py-3 text-sm"><option value="" disabled>Grade Applying For</option><option>Nursery</option><option>KG</option><option>Class I – V</option><option>Class VI – VIII</option><option>Class IX – X</option><option>Class XI – XII</option></select>
+	<label for="adm-name" class="sr-only">Parent's Name</label>
+	<input id="adm-name" bind:value={name} placeholder="Parent's Name" class="rounded-sm border border-ink/20 px-3 py-3 text-sm" />
+	<label for="adm-phone" class="sr-only">Phone Number</label>
+	<input id="adm-phone" bind:value={phone} type="tel" placeholder="Phone Number" class="rounded-sm border border-ink/20 px-3 py-3 text-sm" />
+	<label for="adm-grade" class="sr-only">Grade Applying For</label>
+	<select id="adm-grade" bind:value={grade} class="rounded-sm border border-ink/20 bg-white px-3 py-3 text-sm"><option value="" disabled>Grade Applying For</option><option>Nursery</option><option>KG</option><option>Class I – V</option><option>Class VI – VIII</option><option>Class IX – X</option><option>Class XI – XII</option></select>
 	<button class="min-h-12 rounded-sm bg-maroon-800 text-sm font-extrabold text-white sm:col-span-3">SUBMIT ENQUIRY</button></form>
 	{#if err}<p class="mt-2 text-sm text-red-700">{err}</p>{/if}{/if}
 	<p class="mt-3 text-sm text-ink/60">Questions? Call <a class="font-bold text-maroon-800" href="tel:+919876543210">+91 98765 43210</a> or write to info@sunshineschool.edu.in.</p></div></Reveal>

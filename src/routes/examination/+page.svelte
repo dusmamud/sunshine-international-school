@@ -6,6 +6,20 @@
 	let band = $state(0);
 </script>
 
+<svelte:head>
+	<meta name="description" content="Examinations at Sunshine International School, New Delhi — date sheets, assessment patterns and results for Classes VI to XII, all in one place." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/examination" />
+	<meta property="og:title" content="Examinations | Sunshine International School" />
+	<meta property="og:description" content="Examinations at Sunshine International School, New Delhi — date sheets, assessment patterns and results for Classes VI to XII, all in one place." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/examination" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Examinations | Sunshine International School" />
+	<meta name="twitter:description" content="Examinations at Sunshine International School, New Delhi — date sheets, assessment patterns and results for Classes VI to XII, all in one place." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Examinations"
 	subtitle="Date sheets, assessment patterns and results — everything about how we assess, in one place. (Demo dates for 2026–27.)"

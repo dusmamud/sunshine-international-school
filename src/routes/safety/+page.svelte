@@ -5,6 +5,20 @@
 	import { safetyPoints } from '#lib/data/more';
 </script>
 
+<svelte:head>
+	<meta name="description" content="Campus safety at Sunshine International School, New Delhi — CCTV, supervised buses, a full-time nurse and fire drills every term keep children safe." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/safety" />
+	<meta property="og:title" content="Campus Safety | Sunshine International School" />
+	<meta property="og:description" content="Campus safety at Sunshine International School, New Delhi — CCTV, supervised buses, a full-time nurse and fire drills every term keep children safe." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/safety" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Campus Safety | Sunshine International School" />
+	<meta name="twitter:description" content="Campus safety at Sunshine International School, New Delhi — CCTV, supervised buses, a full-time nurse and fire drills every term keep children safe." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Campus Safety"
 	subtitle="Your child's safety is our first job — CCTV, supervised buses, a full-time nurse and drills every term. (Demo content.)"

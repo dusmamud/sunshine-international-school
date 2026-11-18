@@ -16,6 +16,20 @@
 	let rest = $derived(shown.filter((n) => !n.pinned));
 </script>
 
+<svelte:head>
+	<meta name="description" content="Notice board of Sunshine International School, New Delhi — official notices for parents and students, with pinned notices always at the top." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/notice-board" />
+	<meta property="og:title" content="Notice Board | Sunshine International School" />
+	<meta property="og:description" content="Notice board of Sunshine International School, New Delhi — official notices for parents and students, with pinned notices always at the top." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/notice-board" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Notice Board | Sunshine International School" />
+	<meta name="twitter:description" content="Notice board of Sunshine International School, New Delhi — official notices for parents and students, with pinned notices always at the top." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Notice Board"
 	subtitle="Official notices for parents and students. Pinned notices stay at the top. All notices are demo data for client presentation."

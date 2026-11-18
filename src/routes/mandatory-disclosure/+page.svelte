@@ -4,6 +4,20 @@
 	import { disclosure } from '#lib/data/more';
 </script>
 
+<svelte:head>
+	<meta name="description" content="Mandatory Disclosure — Sunshine International School, New Delhi: general information, certificates, fees, committees, staff and infrastructure per CBSE." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/mandatory-disclosure" />
+	<meta property="og:title" content="Mandatory Disclosure | Sunshine International School" />
+	<meta property="og:description" content="Mandatory Disclosure — Sunshine International School, New Delhi: general information, certificates, fees, committees, staff and infrastructure per CBSE." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/mandatory-disclosure" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Mandatory Disclosure | Sunshine International School" />
+	<meta name="twitter:description" content="Mandatory Disclosure — Sunshine International School, New Delhi: general information, certificates, fees, committees, staff and infrastructure per CBSE." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Mandatory Disclosure"
 	subtitle="General information, certificates, fee structure, committees, staff and infrastructure — as required by CBSE (Appendix IX). All figures are demo data for client presentation."

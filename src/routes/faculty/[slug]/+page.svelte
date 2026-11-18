@@ -10,15 +10,66 @@
 	const firstName = $derived(
 		teacher.name.replace(/^(Dr\.|Mr\.|Mrs\.|Ms\.)\s+/, '').split(' ')[0]
 	);
+	const truncate = (s: string, n = 155) =>
+		s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…';
+	const desc = $derived(
+		truncate(
+			`${teacher.name}, ${teacher.role} (${teacher.department}) at Sunshine International School, New Delhi — ${teacher.bio}`
+		)
+	);
+	const personLd = $derived({
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: teacher.name,
+		jobTitle: teacher.role,
+		description: teacher.bio,
+		worksFor: {
+			'@type': 'School',
+			'@id': 'https://sunshine-international-school.pages.dev/#school',
+			name: 'Sunshine International School'
+		}
+	});
+	const breadcrumbLd = $derived({
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: 'https://sunshine-international-school.pages.dev/'
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Faculty',
+				item: 'https://sunshine-international-school.pages.dev/faculty'
+			},
+			{
+				'@type': 'ListItem',
+				position: 3,
+				name: teacher.name,
+				item: 'https://sunshine-international-school.pages.dev/faculty/' + teacher.slug
+			}
+		]
+	});
+	const jsonLd = $derived({ '@context': 'https://schema.org', '@graph': [personLd, breadcrumbLd] });
 </script>
 
 <svelte:head>
 	<title>{teacher.name} — {teacher.role} | Sunshine International School</title>
-	<meta
-		name="description"
-		content="{teacher.name}, {teacher.role} ({teacher.department}) at Sunshine International School, New Delhi. {teacher.bio}"
-	/>
+	<meta name="description" content={desc} />
 	<link rel="canonical" href="https://sunshine-international-school.pages.dev/faculty/{teacher.slug}" />
+	<meta property="og:title" content="{teacher.name} — {teacher.role} | Sunshine International School" />
+	<meta property="og:description" content={desc} />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/faculty/{teacher.slug}" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="{teacher.name} — {teacher.role} | Sunshine International School" />
+	<meta name="twitter:description" content={desc} />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	{@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`}
 </svelte:head>
 
 <!-- Portfolio hero -->

@@ -24,6 +24,20 @@
 	}
 </script>
 
+<svelte:head>
+	<meta name="description" content="Open Day at Sunshine International School, New Delhi — spend a morning on campus, tour the classrooms, meet the teachers and watch a live class." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/open-day" />
+	<meta property="og:title" content="Open Day | Sunshine International School" />
+	<meta property="og:description" content="Open Day at Sunshine International School, New Delhi — spend a morning on campus, tour the classrooms, meet the teachers and watch a live class." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/open-day" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Open Day | Sunshine International School" />
+	<meta name="twitter:description" content="Open Day at Sunshine International School, New Delhi — spend a morning on campus, tour the classrooms, meet the teachers and watch a live class." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Open Day"
 	subtitle="The best way to choose a school is to spend a morning in it. Join our Open Day — tour the campus, meet the teachers, watch a live class. (Demo event.)"

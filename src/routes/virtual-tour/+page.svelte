@@ -3,6 +3,7 @@
 	import Reveal from '#lib/components/Reveal.svelte';
 	import Icon from '#lib/components/Icon.svelte';
 	import { tourStops, openDaySlots } from '#lib/data/more';
+	import { imgWidth, imgHeight, imgSrcset } from '#lib/images';
 
 	let stop = $state(0);
 	let name = $state('');
@@ -22,6 +23,20 @@
 	}
 </script>
 
+<svelte:head>
+	<meta name="description" content="Virtual tour of Sunshine International School, New Delhi — walk the campus from your sofa, from the main gate to the auditorium, in six stops." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/virtual-tour" />
+	<meta property="og:title" content="Virtual Tour | Sunshine International School" />
+	<meta property="og:description" content="Virtual tour of Sunshine International School, New Delhi — walk the campus from your sofa, from the main gate to the auditorium, in six stops." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/virtual-tour" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/main-gate.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Virtual Tour | Sunshine International School" />
+	<meta name="twitter:description" content="Virtual tour of Sunshine International School, New Delhi — walk the campus from your sofa, from the main gate to the auditorium, in six stops." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/main-gate.webp" />
+</svelte:head>
+
 <PageHero
 	title="Virtual Tour"
 	subtitle="Walk the campus from your sofa — six stops, from the main gate to the auditorium. Then come and see it for real. (Demo tour.)"
@@ -32,7 +47,7 @@
 	<Reveal>
 		<div class="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-ink/5">
 			<div class="relative">
-				<img src={tourStops[stop].img} alt={tourStops[stop].name} class="h-72 w-full object-cover sm:h-[26rem]" />
+				<img src={tourStops[stop].img} alt={tourStops[stop].name} width={imgWidth(tourStops[stop].img)} height={imgHeight(tourStops[stop].img)} srcset={imgSrcset(tourStops[stop].img)} sizes="(max-width: 640px) 100vw, 900px" class="h-72 w-full object-cover sm:h-[26rem]" />
 				<span class="absolute top-4 left-4 rounded-full bg-maroon-800 px-3 py-1 text-xs font-extrabold tracking-wider text-white">STOP {stop + 1} OF {tourStops.length}</span>
 				<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 pt-16 text-white sm:p-6">
 					<h2 class="font-display text-2xl font-bold sm:text-3xl">{tourStops[stop].name}</h2>
@@ -55,7 +70,7 @@
 		<div class="mt-8 grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
 			{#each tourStops as s, i}
 				<button type="button" onclick={() => (stop = i)} class="overflow-hidden rounded-lg text-left ring-2 transition {i === stop ? 'ring-maroon-800' : 'ring-transparent hover:ring-maroon-800/40'}">
-					<img src={s.img} alt={s.name} class="h-20 w-full object-cover" loading="lazy" />
+					<img src={s.img} alt={s.name} width={imgWidth(s.img)} height={imgHeight(s.img)} srcset={imgSrcset(s.img)} sizes="(max-width: 640px) 25vw, 200px" class="h-20 w-full object-cover" loading="lazy" />
 					<span class="block bg-white px-2 py-2 text-xs font-bold text-ink">{i + 1}. {s.name}</span>
 				</button>
 			{/each}

@@ -222,6 +222,7 @@
 			<input
 				type="search"
 				placeholder="Try “admissions”, “fees”, “library”…"
+				aria-label="Search the site"
 				bind:value={query}
 				class="mt-4 w-full rounded-lg border border-white/20 bg-white/10 px-5 py-4 text-lg text-white placeholder:text-white/50 focus:border-gold-400 focus:outline-none"
 			/>

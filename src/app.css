@@ -34,6 +34,15 @@ body {
 	@apply bg-white font-sans text-ink antialiased;
 }
 
+/* Images: never overflow their container; width/height attributes on every
+   <img> give the browser the aspect ratio up front, so height:auto reserves
+   the right space and prevents layout shift. (Tailwind preflight sets the
+   same declarations; this keeps the guarantee explicit in app.css.) */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 ::selection {
 	background: #c9a227;
 	color: #5c1420;

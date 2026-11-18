@@ -3,6 +3,20 @@
 	import Reveal from '#lib/components/Reveal.svelte';
 </script>
 
+<svelte:head>
+	<meta name="description" content="Accessibility Statement — Sunshine International School is committed to a website every parent and student can use, regardless of ability or device." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/accessibility" />
+	<meta property="og:title" content="Accessibility Statement | Sunshine International School" />
+	<meta property="og:description" content="Accessibility Statement — Sunshine International School is committed to a website every parent and student can use, regardless of ability or device." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/accessibility" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Accessibility Statement | Sunshine International School" />
+	<meta name="twitter:description" content="Accessibility Statement — Sunshine International School is committed to a website every parent and student can use, regardless of ability or device." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Accessibility Statement"
 	subtitle="Sunshine International School is committed to a website every parent and student can use — regardless of ability or device."

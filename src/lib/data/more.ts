@@ -585,6 +585,7 @@ export const newsItems = [
 	{
 		slug: 'summer-camp-2026-registrations-open',
 		date: '20 MAY 2026',
+		dateIso: '2026-05-20',
 		title: 'Summer Camp 2026 Registrations Open!',
 		excerpt: 'Cricket, coding, music and art — four weeks of fun learning.',
 		img: '/images/sports-students.webp',
@@ -593,6 +594,7 @@ export const newsItems = [
 	{
 		slug: 'parent-teacher-meeting-may-2026',
 		date: '15 MAY 2026',
+		dateIso: '2026-05-15',
 		title: 'Parent-Teacher Meeting',
 		excerpt: 'Saturday, 25 May 2026, 9 AM – 1 PM across all classes.',
 		img: '/images/primary-classroom.webp',
@@ -601,6 +603,7 @@ export const newsItems = [
 	{
 		slug: 'admissions-open-2026-27',
 		date: '10 MAY 2026',
+		dateIso: '2026-05-10',
 		title: 'Admissions Open for 2026-27 Session',
 		excerpt: 'Nursery to Class XII — apply online or visit the campus.',
 		img: '/images/hero-students.webp',
@@ -609,6 +612,7 @@ export const newsItems = [
 	{
 		slug: 'annual-sports-day-winners',
 		date: '02 MAY 2026',
+		dateIso: '2026-05-02',
 		title: 'Annual Sports Day Winners',
 		excerpt: 'Red House lifts the overall championship trophy.',
 		img: '/images/sports-students.webp',
@@ -617,6 +621,7 @@ export const newsItems = [
 	{
 		slug: 'science-exhibition-2026',
 		date: '25 APR 2026',
+		dateIso: '2026-04-25',
 		title: 'Science Exhibition 2026',
 		excerpt: '120 student projects on display — parents welcome.',
 		img: '/images/science-lab.jpg',
@@ -625,6 +630,7 @@ export const newsItems = [
 	{
 		slug: 'inter-school-debate-champions',
 		date: '18 APR 2026',
+		dateIso: '2026-04-18',
 		title: 'Inter-School Debate Champions',
 		excerpt: 'SIS team wins the Delhi inter-school debate.',
 		img: '/images/performing-arts.jpg',

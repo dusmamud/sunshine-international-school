@@ -5,6 +5,20 @@
 	import { downloads } from '#lib/data/more';
 </script>
 
+<svelte:head>
+	<meta name="description" content="Downloads from Sunshine International School, New Delhi — admission, transfer certificate, fee challan and other forms for parents, as real PDFs." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/downloads" />
+	<meta property="og:title" content="Downloads | Sunshine International School" />
+	<meta property="og:description" content="Downloads from Sunshine International School, New Delhi — admission, transfer certificate, fee challan and other forms for parents, as real PDFs." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/downloads" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Downloads | Sunshine International School" />
+	<meta name="twitter:description" content="Downloads from Sunshine International School, New Delhi — admission, transfer certificate, fee challan and other forms for parents, as real PDFs." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Downloads"
 	subtitle="Forms and documents for parents — print, fill and submit at the school office. Every link below downloads a real PDF."

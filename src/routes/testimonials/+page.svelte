@@ -16,6 +16,20 @@
 	);
 </script>
 
+<svelte:head>
+	<meta name="description" content="Testimonials — what parents, students and alumni say about Sunshine International School, New Delhi, from Nursery classrooms to the alumni network." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/testimonials" />
+	<meta property="og:title" content="Testimonials | Sunshine International School" />
+	<meta property="og:description" content="Testimonials — what parents, students and alumni say about Sunshine International School, New Delhi, from Nursery classrooms to the alumni network." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/testimonials" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Testimonials | Sunshine International School" />
+	<meta name="twitter:description" content="Testimonials — what parents, students and alumni say about Sunshine International School, New Delhi, from Nursery classrooms to the alumni network." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+</svelte:head>
+
 <PageHero
 	title="Testimonials"
 	subtitle="What parents, students and alumni say about Sunshine International School. All testimonials are demo content for client presentation."

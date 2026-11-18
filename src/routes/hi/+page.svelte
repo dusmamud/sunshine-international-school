@@ -1,7 +1,18 @@
 <script lang="ts">
+	import { onMount, onDestroy } from 'svelte';
+	import { imgSrcset } from '#lib/images';
 	import Icon from '#lib/components/Icon.svelte';
 	import Reveal from '#lib/components/Reveal.svelte';
 	import CountUp from '#lib/components/CountUp.svelte';
+
+	// This page is in Hindi: declare lang="hi" on <html> (app.html stays lang="en"
+	// for the rest of the site) and restore it when leaving the page.
+	onMount(() => {
+		document.documentElement.lang = 'hi';
+	});
+	onDestroy(() => {
+		document.documentElement.lang = 'en';
+	});
 
 	let parentName = $state('');
 	let phone = $state('');
@@ -22,12 +33,22 @@
 
 <svelte:head>
 	<title>सनशाइन इंटरनेशनल स्कूल, नई दिल्ली | मन को पोषित करें। भविष्य को आकार दें।</title>
-	<meta name="description" content="सनशाइन इंटरनेशनल स्कूल, नई दिल्ली — नर्सरी से कक्षा XII तक। प्रवेश 2026-27 के लिए खुले हैं।" />
+	<meta name="description" content="सनशाइन इंटरनेशनल स्कूल, नई दिल्ली — नर्सरी से कक्षा XII तक ज्ञान, मूल्य और कौशल के साथ बच्चों को तैयार करता है। प्रवेश 2026-27 के लिए खुले हैं।" />
 	<link rel="canonical" href="https://sunshine-international-school.pages.dev/hi" />
+	<meta property="og:title" content="सनशाइन इंटरनेशनल स्कूल, नई दिल्ली" />
+	<meta property="og:description" content="सनशाइन इंटरनेशनल स्कूल, नई दिल्ली — नर्सरी से कक्षा XII तक ज्ञान, मूल्य और कौशल के साथ बच्चों को तैयार करता है। प्रवेश 2026-27 के लिए खुले हैं।" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/hi" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="सनशाइन इंटरनेशनल स्कूल, नई दिल्ली" />
+	<meta name="twitter:description" content="सनशाइन इंटरनेशनल स्कूल, नई दिल्ली — नर्सरी से कक्षा XII तक ज्ञान, मूल्य और कौशल के साथ बच्चों को तैयार करता है। प्रवेश 2026-27 के लिए खुले हैं।" />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/hero-students.webp" />
+	<script>document.documentElement.lang = 'hi';</script>
 </svelte:head>
 
 <section class="relative overflow-hidden bg-cream">
-	<img src="/images/main-gate.webp" alt="" aria-hidden="true" class="hero-kenburns pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25" />
+	<img src="/images/main-gate.webp" alt="" aria-hidden="true" width="2288" height="1104" srcset={imgSrcset('/images/main-gate.webp')} sizes="100vw" fetchpriority="low" class="hero-kenburns pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25" />
 	<div class="relative mx-auto grid max-w-7xl gap-8 px-4 pt-12 pb-12 sm:px-6 lg:grid-cols-2 lg:px-8">
 		<div class="fade-up min-w-0">
 			<p class="text-xs font-extrabold tracking-[0.3em] text-maroon-800">जहाँ युवा मन खिलते हैं</p>
@@ -44,7 +65,7 @@
 			</div>
 		</div>
 		<div class="min-w-0">
-			<img src="/images/hero-students.webp" alt="सनशाइन इंटरनेशनल स्कूल के दो छात्र" class="h-[24rem] w-full rounded-lg object-cover object-top shadow-xl" />
+			<img src="/images/hero-students.webp" alt="सनशाइन इंटरनेशनल स्कूल के दो छात्र" width="1920" height="1280" srcset={imgSrcset('/images/hero-students.webp')} sizes="(max-width: 640px) 100vw, 640px" fetchpriority="high" class="h-[24rem] w-full rounded-lg object-cover object-top shadow-xl" />
 			<div class="mt-4 overflow-hidden rounded-lg bg-white shadow-xl ring-1 ring-maroon-800/10">
 				<div class="bg-maroon-800 px-5 py-4 text-white">
 					<h2 class="text-lg font-extrabold tracking-wide">अभी पूछताछ करें</h2>

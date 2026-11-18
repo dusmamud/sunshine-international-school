@@ -3,6 +3,7 @@
 	import Reveal from '#lib/components/Reveal.svelte';
 	import Icon from '#lib/components/Icon.svelte';
 	import { newsItems } from '#lib/data/more';
+	import { imgWidth, imgHeight, imgSrcset } from '#lib/images';
 
 	let subEmail = $state('');
 	let subError = $state('');
@@ -19,13 +20,27 @@
 	}
 </script>
 
+<svelte:head>
+	<meta name="description" content="News &amp; events at Sunshine International School, New Delhi — admissions, sports day, science exhibitions, debates and parent-teacher meetings." />
+	<link rel="canonical" href="https://sunshine-international-school.pages.dev/news-events" />
+	<meta property="og:title" content="News &amp; Events | Sunshine International School" />
+	<meta property="og:description" content="News &amp; events at Sunshine International School, New Delhi — admissions, sports day, science exhibitions, debates and parent-teacher meetings." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://sunshine-international-school.pages.dev/news-events" />
+	<meta property="og:image" content="https://sunshine-international-school.pages.dev/images/sports-students.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="News &amp; Events | Sunshine International School" />
+	<meta name="twitter:description" content="News &amp; events at Sunshine International School, New Delhi — admissions, sports day, science exhibitions, debates and parent-teacher meetings." />
+	<meta name="twitter:image" content="https://sunshine-international-school.pages.dev/images/sports-students.webp" />
+</svelte:head>
+
 <PageHero title="News & Events" subtitle="What's happening at Sunshine International School. (Demo items.)" crumb={[{ label: 'Home', href: '/' }, { label: 'News & Events' }]} />
 <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
 	<div class="grid gap-4 md:grid-cols-3">
 	{#each newsItems as n}
 		<Reveal cls="min-w-0">
 			<a href="/news-events/{n.slug}" class="block h-full overflow-hidden rounded-lg border border-ink/10 bg-white shadow-sm transition hover:shadow-lg">
-				<img src={n.img} alt={n.title} class="h-44 w-full object-cover" loading="lazy" />
+				<img src={n.img} alt={n.title} width={imgWidth(n.img)} height={imgHeight(n.img)} srcset={imgSrcset(n.img)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" class="h-44 w-full object-cover" loading="lazy" />
 				<div class="p-6">
 					<p class="text-xs font-extrabold tracking-wider text-maroon-800">{n.date} · {n.category.toUpperCase()}</p>
 					<h2 class="mt-2 font-display text-xl font-bold">{n.title}</h2>
