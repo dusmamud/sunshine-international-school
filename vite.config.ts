@@ -18,7 +18,15 @@ export default defineConfig({
 				fallback: '404.html',
 				precompress: false,
 				strict: true
-			})
+			}),
+			// Inline the built CSS into a <style> block so the render-blocking
+			// stylesheet request is eliminated (PSI: ~110ms on home). This is a
+			// top-level SvelteKit option (flat inside sveltekit({...}), NOT
+			// nested under `kit:` — split_config() forwards a `kit:` key to
+			// vite-plugin-svelte, where it would be silently ignored).
+			// Built CSS is 51,770 bytes (build/_app/immutable/assets/0.*.css),
+			// so 100000 covers it; each page's HTML grows by ~52 KB instead.
+			inlineStyleThreshold: 100000
 		})
 	]
 });

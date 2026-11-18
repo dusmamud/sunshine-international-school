@@ -27,7 +27,7 @@ const IMAGES: Record<string, ImageVariant> = {
 	},
 	'/images/main-gate.webp': {
 		srcset:
-			'/images/main-gate-800.webp 800w, /images/main-gate-1600.webp 1600w, /images/main-gate.webp 2288w',
+			'/images/main-gate-400.webp 400w, /images/main-gate-800.webp 800w, /images/main-gate-1200.webp 1200w, /images/main-gate-1600.webp 1600w, /images/main-gate.webp 2288w',
 		width: 2288,
 		height: 1104
 	},
@@ -47,7 +47,8 @@ const IMAGES: Record<string, ImageVariant> = {
 		height: 1280
 	},
 	'/images/primary-classroom.webp': {
-		srcset: '/images/primary-classroom-800.webp 800w, /images/primary-classroom.webp 1920w',
+		srcset:
+			'/images/primary-classroom-400.webp 400w, /images/primary-classroom-800.webp 800w, /images/primary-classroom.webp 1920w',
 		width: 1920,
 		height: 1280
 	},
@@ -57,7 +58,8 @@ const IMAGES: Record<string, ImageVariant> = {
 		height: 1280
 	},
 	'/images/sports-students.webp': {
-		srcset: '/images/sports-students-800.webp 800w, /images/sports-students.webp 1920w',
+		srcset:
+			'/images/sports-students-400.webp 400w, /images/sports-students-800.webp 800w, /images/sports-students.webp 1920w',
 		width: 1920,
 		height: 1280
 	},
@@ -72,7 +74,8 @@ const IMAGES: Record<string, ImageVariant> = {
 		height: 600
 	},
 	'/images/library.jpg': {
-		srcset: '/images/library-400.jpg 400w, /images/library.jpg 900w',
+		srcset:
+			'/images/library-400.jpg 400w, /images/library-600.jpg 600w, /images/library-800.jpg 800w, /images/library.jpg 900w',
 		width: 900,
 		height: 600
 	},
@@ -92,7 +95,8 @@ const IMAGES: Record<string, ImageVariant> = {
 		height: 600
 	},
 	'/images/science-lab.jpg': {
-		srcset: '/images/science-lab-400.jpg 400w, /images/science-lab.jpg 900w',
+		srcset:
+			'/images/science-lab-400.jpg 400w, /images/science-lab-800.jpg 800w, /images/science-lab.jpg 900w',
 		width: 900,
 		height: 600
 	},

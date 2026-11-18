@@ -88,7 +88,6 @@
 	<img
 		src="/images/main-gate.webp"
 		alt=""
-		aria-hidden="true"
 		width="2288"
 		height="1104"
 		srcset={imgSrcset('/images/main-gate.webp')}
@@ -213,7 +212,7 @@
 						<button type="submit" class="btn-shine min-h-12 w-full rounded-sm bg-maroon-800 text-sm font-extrabold tracking-wide text-white transition hover:bg-maroon-700">
 							SUBMIT ENQUIRY
 						</button>
-						<p class="text-center text-[0.68rem] text-ink/45">Demo form — no data is sent anywhere.</p>
+						<p class="text-center text-[0.68rem] text-ink/70">Demo form — no data is sent anywhere.</p>
 					</form>
 				{/if}
 			</div>
@@ -228,7 +227,7 @@
 		<p class="min-w-0 truncate text-sm">
 			<a href="/notice-board" class="hover:text-gold-300">Admissions open for 2026–27 · Half-Yearly date sheet released · Annual Sports Day on 05 Dec 2026</a>
 		</p>
-		<a href="/notice-board" class="ml-auto hidden shrink-0 text-xs font-extrabold tracking-wider whitespace-nowrap text-gold-300 hover:text-gold-400 sm:inline">VIEW ALL →</a>
+		<a href="/notice-board" aria-label="View all notices" class="ml-auto hidden shrink-0 text-xs font-extrabold tracking-wider whitespace-nowrap text-gold-300 hover:text-gold-400 sm:inline">VIEW ALL →</a>
 	</div>
 </div>
 
@@ -246,7 +245,7 @@
 					At Sunshine International School, we focus on academic excellence, character building and
 					all-round development to prepare students for a successful future.
 				</p>
-				<a href="/about" class="mt-6 inline-flex min-h-12 items-center rounded-sm border-2 border-maroon-800 px-6 text-sm font-extrabold tracking-wide text-maroon-800 transition hover:bg-maroon-50">
+				<a href="/about" aria-label="Know more about Sunshine International School" class="mt-6 inline-flex min-h-12 items-center rounded-sm border-2 border-maroon-800 px-6 text-sm font-extrabold tracking-wide text-maroon-800 transition hover:bg-maroon-50">
 					KNOW MORE ABOUT US
 				</a>
 			</div>
@@ -287,7 +286,7 @@
 				<Reveal cls="min-w-0" delay={i * 100}>
 					<article class="card-lift group relative h-full overflow-visible rounded-lg bg-white shadow-sm ring-1 ring-ink/5">
 						<div class="relative overflow-hidden rounded-t-lg">
-							<img src={p.img} alt="{p.title} at Sunshine International School" width={imgWidth(p.img)} height={imgHeight(p.img)} srcset={imgSrcset(p.img)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" class="h-44 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+							<img src={p.img} alt="{p.title} at Sunshine International School" width={imgWidth(p.img)} height={imgHeight(p.img)} srcset={imgSrcset(p.img)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 240px" class="h-44 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
 							<span class="absolute -top-5 left-4 flex h-10 w-10 items-center justify-center rounded-full bg-maroon-800 text-white shadow-lg ring-4 ring-cream/70">
 								<Icon name={p.icon} cls="h-5 w-5" />
 							</span>
@@ -296,7 +295,7 @@
 							<h3 class="font-display text-lg font-bold text-ink">{p.title}</h3>
 							<p class="mt-1 text-sm font-bold text-maroon-800">{p.tagline}</p>
 							<p class="mt-2 text-sm leading-relaxed text-ink/65">{p.text}</p>
-							<a href="/admissions/{p.id === 'pre-primary' ? 'pre-primary' : p.id === 'primary' ? 'primary' : p.id === 'middle' ? 'middle' : p.id === 'high' ? 'high' : 'senior-secondary'}" class="group/link mt-3 inline-flex min-h-11 items-center gap-1 text-xs font-extrabold tracking-wider text-maroon-800">
+							<a href="/admissions/{p.id === 'pre-primary' ? 'pre-primary' : p.id === 'primary' ? 'primary' : p.id === 'middle' ? 'middle' : p.id === 'high' ? 'high' : 'senior-secondary'}" aria-label="Read more about {p.title} admissions" class="group/link mt-3 inline-flex min-h-11 items-center gap-1 text-xs font-extrabold tracking-wider text-maroon-800">
 								READ MORE <Icon name="arrow-right" cls="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
 							</a>
 						</div>
@@ -353,7 +352,7 @@
 			<div class="card-lift h-full rounded-lg border border-ink/10 bg-white p-6 shadow-sm">
 				<h3 class="text-xs font-extrabold tracking-[0.25em] text-maroon-800">WHAT PARENTS SAY</h3>
 				<Icon name="quote" cls="mt-4 h-8 w-8 text-gold-500" />
-				<div class="mt-3 flex gap-0.5" aria-label="Rated 5 out of 5 stars">
+				<div class="mt-3 flex gap-0.5" role="img" aria-label="Rated 5 out of 5 stars">
 					{#each Array(5) as _}<Icon name="star" cls="h-4 w-4 text-gold-500" />{/each}
 				</div>
 				<blockquote class="mt-3 leading-relaxed text-ink/75">“{testimonial.quote}”</blockquote>
@@ -361,7 +360,7 @@
 					<span class="flex h-12 w-12 items-center justify-center rounded-full bg-maroon-800 font-display text-lg font-bold text-gold-400">PS</span>
 					<div>
 						<p class="font-bold text-ink">{testimonial.name}</p>
-						<p class="text-xs text-ink/60">{testimonial.detail}</p>
+						<p class="text-xs text-ink/70">{testimonial.detail}</p>
 					</div>
 				</div>
 			</div>
@@ -383,7 +382,7 @@
 						</li>
 					{/each}
 				</ul>
-				<a href="/news-events" class="mt-4 inline-flex min-h-11 items-center text-xs font-extrabold tracking-wider text-maroon-800">Know More →</a>
+				<a href="/news-events" aria-label="Know more about news and events" class="mt-4 inline-flex min-h-11 items-center text-xs font-extrabold tracking-wider text-maroon-800">Know More →</a>
 			</div>
 		</Reveal>
 		<Reveal cls="min-w-0">
@@ -408,7 +407,7 @@
 			</div>
 		</Reveal>
 	</div>
-	<p class="mt-8 text-center text-xs text-ink/40">
+	<p class="mt-8 text-center text-xs text-ink/70">
 		Demo website — all names, fees, dates, testimonials and photos are mock content for client presentation.
 	</p>
 </section>
